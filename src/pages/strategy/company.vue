@@ -26,15 +26,13 @@
             {{ t('pages.company.description') }}</p>
           <p class="text-3xl font-bold mb-6 border-b border-[#1A2E56] pb-3 mt-16">
             {{ t('pages.company.serviceModules.title') }}</p>
-          <!-- <p class="text-base sm:text-lg md:text-xl leading-relaxed">
-            {{ t('pages.company.serviceModules.content') }}
-          </p> -->
+
           <div class="px-16 py-20">
             <img :src="images" alt="" class="w-full h-auto" srcset="">
           </div>
           <p class="text-3xl font-bold mb-6 border-b border-[#1A2E56] pb-3 mt-16">
             {{ t('pages.company.whyChoose.title') }}</p>
-          <div class="flex flex-row justify-center items-center gap-20">
+          <div class="flex flex-row justify-center items-center gap-16">
             <div class="w-1/2 flex justify-center">
               <img src="@/assets/images/strategy/company/bg.png" alt="" srcset="" class="w-full max-w-none">
             </div>

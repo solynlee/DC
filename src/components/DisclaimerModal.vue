@@ -1,6 +1,6 @@
 <template>
-  <el-dialog v-model="visible" :lockScroll='false' :width="isMobile ? '95%' : '80%'" :close-on-click-modal="false"
-    :close-on-press-escape="false" :show-close="false" class="disclaimer-modal" top="3vh">
+  <el-dialog v-model="visible" :lockScroll='false' width="80%" :close-on-click-modal="false"
+    :close-on-press-escape="false" :show-close="false" class="disclaimer-modal">
     <div class="disclaimer-content">
 
       <!-- 内容区域 -->
@@ -50,7 +50,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 import { ElDialog, ElButton, ElCheckbox } from 'element-plus'
 
 import { useI18n } from 'vue-i18n'
@@ -61,10 +61,7 @@ const { t } = useI18n()
 const visible = ref(false)
 const agreed = ref(false)
 
-// 计算属性
-const isMobile = computed(() => {
-  return window.innerWidth <= 768
-})
+
 
 // 检查是否已经同意过免责声明
 const checkDisclaimerAgreed = (): boolean => {
@@ -286,115 +283,11 @@ defineExpose({
   box-shadow: none;
 }
 
-/* 移动端适配 */
-@media (max-width: 768px) {
-  .disclaimer-modal :deep(.el-dialog) {
-    margin: 1vh auto;
-    width: 95% !important;
-  }
 
-  .disclaimer-modal :deep(.el-dialog__header) {
-    padding: 20px 24px;
-  }
 
-  .disclaimer-modal :deep(.el-dialog__title) {
-    font-size: 1.25rem;
-  }
 
-  .content-scroll {
-    padding: 20px;
-    max-height: 55vh;
-  }
 
-  .disclaimer-paragraph {
-    font-size: 13px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
 
-  .disclaimer-footer {
-    font-size: 13px;
-    margin-top: 24px;
-    padding-top: 16px;
-  }
-
-  .confirmation-section {
-    padding: 20px 24px;
-  }
-
-  .checkbox-text {
-    font-size: 14px;
-  }
-
-  .disclaimer-modal :deep(.el-dialog__footer) {
-    padding: 20px 24px;
-  }
-
-  .confirm-btn {
-    width: 100%;
-    padding: 16px 32px;
-    font-size: 15px;
-  }
-}
-
-/* 超小屏适配 */
-@media (max-width: 480px) {
-  .disclaimer-modal :deep(.el-dialog) {
-    margin: 0.5vh auto;
-    width: 98% !important;
-  }
-
-  .disclaimer-modal :deep(.el-dialog__title) {
-    font-size: 1.1rem;
-  }
-
-  .content-scroll {
-    padding: 16px;
-    max-height: 50vh;
-  }
-
-  .disclaimer-paragraph {
-    font-size: 12px;
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
-
-  .checkbox-text {
-    font-size: 13px;
-  }
-}
-
-/* 高分辨率屏幕优化 */
-@media (min-width: 1200px) {
-  .disclaimer-modal :deep(.el-dialog__title) {
-    font-size: 1.75rem;
-  }
-
-  .content-scroll {
-    padding: 40px;
-  }
-
-  .disclaimer-paragraph {
-    font-size: 15px;
-    line-height: 1.9;
-    margin-bottom: 28px;
-  }
-
-  .disclaimer-footer {
-    font-size: 15px;
-    margin-top: 36px;
-    padding-top: 24px;
-  }
-
-  .checkbox-text {
-    font-size: 16px;
-  }
-
-  .confirm-btn {
-    padding: 16px 56px;
-    font-size: 17px;
-  }
-}
 
 /* 打印样式 */
 @media print {

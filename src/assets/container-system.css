@@ -56,6 +56,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: auto;
     min-height: 100vh;
     background: #f8f9fa; /* 浅灰背景 */
     /* font-family: "AlibabaPuHuiTi-3"; */
@@ -68,7 +69,8 @@ body {
 /* 主应用容器 - 简化为基础容器 */
 #app {
     width: 100%;
-    min-height: 100vh;
+    height: auto;
+    /* min-height由JavaScript动态设置 */
     background: white;
     position: relative;
 }

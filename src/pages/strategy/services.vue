@@ -1,77 +1,71 @@
 <template>
   <section class="h-full w-full text-[#072867]">
     <div class="relative">
-      <img src="@/assets/images/strategy/services/banner.png" alt="" srcset=""
-        class="h-[20vh] md:h-170 w-full object-cover">
+      <img src="@/assets/images/strategy/services/banner.png" alt="" srcset="" class="h-170 w-full object-cover">
       <div class="text-white absolute bottom-0 w-full ">
         <Container type="extra-wide">
           <div class="px-10">
-            <p class="text-sm md:text-5xl font-bold">
+            <p class="text-5xl font-bold">
               {{ t('pages.services.title1') }}
             </p>
-            <p class="text-xl md:text-7xl font-bold mt-2 sm:mt-3 md:mt-4 lg:mt-5 mb-4 sm:mb-6 md:mb-8 lg:mb-10">
+            <p class="text-7xl font-bold mt-4 mb-8">
               {{ t('pages.services.title') }}
             </p>
-            <div class="w-24 md:w-60  h-1.5 md:h-2 bg-[#A37B24]"></div>
+            <div class="w-60 h-2 bg-[#A37B24]"></div>
           </div>
         </Container>
       </div>
     </div>
     <Container type="extra-wide">
-      <div class="px-10 py-6 sm:py-8 md:py-10">
-        <p class="text-base sm:text-lg md:text-xl leading-relaxed">
+      <div class="px-10 py-10">
+        <p class="text-xl leading-relaxed">
           {{ t('pages.services.desc') }}</p>
-        <p
-          class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6 border-b border-[#1A2E56] pb-2 sm:pb-2.5 md:pb-3 mt-6 sm:mt-8 md:mt-12 lg:mt-16">
+        <p class="text-3xl font-bold mb-6 border-b border-[#1A2E56] pb-3 mt-16">
           {{ t('pages.services.services.title') }}</p>
 
-        <div class="mt-6 sm:mt-8 md:mt-10">
+        <div class="mt-10">
           <div class="relative mb-2">
-            <div
-              class="h-2 w-2 sm:h-2.5 sm:w-2.5 md:h-3 md:w-3 rounded-full bg-[#345CAC] absolute -left-4 sm:-left-6 md:-left-8 top-1/2 -translate-y-1/2">
+            <div class="h-3 w-3 rounded-full bg-[#345CAC] absolute -left-8 top-1/2 -translate-y-1/2">
             </div>
-            <p class=" text-lg sm:text-xl md:text-2xl font-bold">
+            <p class="text-2xl font-bold">
               {{ t('pages.services.services.items[0].name') }}
             </p>
           </div>
-          <p class="text-base sm:text-lg md:text-xl leading-relaxed">
+          <p class="text-xl leading-relaxed">
             {{ t('pages.services.services.items[0].desc') }}</p>
         </div>
-        <div class="mt-6 sm:mt-8 md:mt-10">
+        <div class="mt-10">
           <div class="relative mb-2">
-            <div
-              class="h-2 w-2 sm:h-2.5 sm:w-2.5 md:h-3 md:w-3 rounded-full bg-[#345CAC] absolute -left-4 sm:-left-6 md:-left-8 top-1/2 -translate-y-1/2">
+            <div class="h-3 w-3 rounded-full bg-[#345CAC] absolute -left-8 top-1/2 -translate-y-1/2">
             </div>
-            <p class=" text-lg sm:text-xl md:text-2xl font-bold">
+            <p class="text-2xl font-bold">
               {{ t('pages.services.services.items[1].name') }}
             </p>
           </div>
-          <p class="text-base sm:text-lg md:text-xl leading-relaxed">
+          <p class="text-xl leading-relaxed">
             {{ t('pages.services.services.items[1].desc') }}</p>
         </div>
-        <div class="mt-6 sm:mt-8 md:mt-10">
+        <div class="mt-10">
           <div class="relative mb-2">
-            <div
-              class="h-2 w-2 sm:h-2.5 sm:w-2.5 md:h-3 md:w-3 rounded-full bg-[#345CAC] absolute -left-4 sm:-left-6 md:-left-8 top-1/2 -translate-y-1/2">
+            <div class="h-3 w-3 rounded-full bg-[#345CAC] absolute -left-8 top-1/2 -translate-y-1/2">
             </div>
-            <p class=" text-lg sm:text-xl md:text-2xl font-bold">
+            <p class="text-2xl font-bold">
               {{ t('pages.services.services.items[2].name') }}
             </p>
           </div>
-          <p class="text-base sm:text-lg md:text-xl leading-relaxed">
+          <p class="text-xl leading-relaxed">
             {{ t('pages.services.services.items[2].desc') }}
           </p>
         </div>
-        <div class="mt-6 sm:mt-8 md:mt-10">
+        <div class="mt-10">
           <div class="relative mb-2">
-            <div
-              class="h-2 w-2 sm:h-2.5 sm:w-2.5 md:h-3 md:w-3 rounded-full bg-[#345CAC] absolute -left-4 sm:-left-6 md:-left-8 top-1/2 -translate-y-1/2">
+            <div class="h-3 w-3 rounded-full bg-[#345CAC] absolute -left-8 top-1/2 -translate-y-1/2">
             </div>
-            <p class=" text-lg sm:text-xl md:text-2xl font-bold">
+            <p class="text-2xl font-bold">
               {{ t('pages.services.services.items[3].name') }}
             </p>
           </div>
-          <p class="text-base sm:text-lg md:text-xl leading-relaxed">
+          <p class="text-xl leading-relaxed">
             {{ t('pages.services.services.items[3].desc') }}
           </p>
         </div>
@@ -80,24 +74,20 @@
     </Container>
     <div class="bg-[#EBEFF4] ">
       <Container type="extra-wide">
-        <div class="px-10 flex flex-col lg:flex-row justify-center items-center  py-8
-            sm:py-10 md:py-12 lg:py-16 xl:py-20 gap-6 sm:gap-8 md:gap-12 lg:gap-20 xl:gap-30">
+        <div class="px-10 flex flex-row justify-center items-center py-20 gap-20">
 
-
-          <div class="w-full lg:w-1/2 flex justify-center">
-            <img src="@/assets/images/strategy/services/image.png" alt="" srcset=""
-              class="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-none lg:w-full">
+          <div class="w-1/2 flex justify-center">
+            <img src="@/assets/images/strategy/services/image.png" alt="" srcset="" class="w-full">
           </div>
-          <div class="w-full lg:w-1/2 lg:pr-10">
-            <div class="bg-[#A37B24] w-20 sm:w-24 md:w-28 lg:w-30 h-2 sm:h-2.5 md:h-3 mb-6 sm:mb-8 md:mb-10"></div>
-            <p
-              class="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold leading-tight sm:leading-normal md:leading-relaxed lg:leading-12">
+          <div class="w-1/2">
+            <div class="bg-[#A37B24] w-30 h-3 mb-10"></div>
+            <p class="text-4xl font-bold leading-relaxed">
               {{ t('pages.services.value.content') }}<br />
               {{ t('pages.services.value.content2') }}<br />
               {{ t('pages.services.value.content3') }}
             </p>
 
-            <p class="text-base sm:text-lg md:text-xl my-6 sm:my-8 md:my-10 leading-relaxed">
+            <p class="text-xl my-10 leading-relaxed">
               {{ t('pages.services.value.subDesc') }}
             </p>
           </div>

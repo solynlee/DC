@@ -2,13 +2,17 @@ import { ref } from 'vue'
 
 // 全局比例缩放配置 - 使用zoom方案
 const SCALE_CONFIG = {
-  baseWidth: 1684,   // 设计稿基准宽度
-  minWidth: 120      // 启用比例缩放的最小宽度（120px以上都缩放，覆盖超小屏幕）
+  baseWidth: 1684,   // 统一的基准宽度，移动端和PC端都使用相同的设计稿基准
+  minWidth: 120,     // 启用比例缩放的最小宽度（120px以上都缩放，覆盖超小屏幕）
+  minScale: 0.1      // 最小缩放比例，确保在超小屏幕上也有合适的显示
 }
 
 // 全局缩放状态
 const scaleRatio = ref(1)
 const isProportionalScaling = ref(false)
+
+// 存储清理函数
+let cleanupResize: (() => void) | null = null
 
 export function useGlobalScale() {
   const updateProportionalScale = () => {
@@ -17,8 +21,8 @@ export function useGlobalScale() {
     // 所有设备都使用比例缩放，保持PC端样式缩小版
     isProportionalScaling.value = true
 
-    // 计算缩放比例，最小缩放比例限制为0.07（支持超小屏幕）
-    const scale = Math.max(windowWidth / SCALE_CONFIG.baseWidth, 0.07)
+    // 计算缩放比例，使用统一的最小缩放比例
+    const scale = Math.max(windowWidth / SCALE_CONFIG.baseWidth, SCALE_CONFIG.minScale)
     scaleRatio.value = scale
 
     const appContainer = document.getElementById('app')
@@ -31,7 +35,10 @@ export function useGlobalScale() {
       appContainer.style.maxWidth = 'none'
       appContainer.style.transformOrigin = 'top left'
       appContainer.style.transition = 'zoom 0.3s ease-in-out'
-      appContainer.style.minHeight = 'auto'
+
+      // 简单的高度设置，确保最小高度为视口高度
+      appContainer.style.minHeight = '100vh'
+      appContainer.style.height = 'auto'
 
       // 确保body和html能正常滚动，特别是小屏幕适配
       document.body.style.width = '100%'
@@ -43,9 +50,10 @@ export function useGlobalScale() {
       document.body.style.margin = '0'
       document.body.style.padding = '0'
 
-      // 确保html也填满宽度
+      // 确保html也填满宽度，高度自适应内容
       document.documentElement.style.width = '100%'
       document.documentElement.style.height = 'auto'
+      document.documentElement.style.minHeight = '100vh'
       document.documentElement.style.overflow = 'visible'
       document.documentElement.style.overflowX = 'hidden'
       document.documentElement.style.overflowY = 'auto'
@@ -60,11 +68,22 @@ export function useGlobalScale() {
 
   const initGlobalScale = () => {
     updateProportionalScale()
+
+    // 监听窗口大小变化
     window.addEventListener('resize', updateProportionalScale)
+
+    // 存储清理函数
+    cleanupResize = () => {
+      window.removeEventListener('resize', updateProportionalScale)
+    }
   }
 
   const destroyGlobalScale = () => {
-    window.removeEventListener('resize', updateProportionalScale)
+    // 调用存储的清理函数
+    if (cleanupResize) {
+      cleanupResize()
+      cleanupResize = null
+    }
 
     // 清理缩放效果
     const appContainer = document.getElementById('app')
@@ -73,7 +92,8 @@ export function useGlobalScale() {
       appContainer.style.width = '100%'
       appContainer.style.maxWidth = ''
       appContainer.style.transformOrigin = 'top left'
-      appContainer.style.minHeight = 'auto'
+      appContainer.style.minHeight = '100vh'
+      appContainer.style.height = 'auto'
 
       document.body.style.width = '100%'
       document.body.style.height = 'auto'
@@ -84,8 +104,9 @@ export function useGlobalScale() {
       document.body.style.margin = '0'
       document.body.style.padding = '0'
 
-      document.documentElement.style.width = ''
+      document.documentElement.style.width = '100%'
       document.documentElement.style.height = 'auto'
+      document.documentElement.style.minHeight = '100vh'
       document.documentElement.style.overflow = 'auto'
       document.documentElement.style.overflowX = 'hidden'
       document.documentElement.style.overflowY = 'auto'

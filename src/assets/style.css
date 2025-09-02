@@ -70,6 +70,8 @@ html {
     }
     html {
         width: 100%;
+        height: auto;
+        min-height: 100vh;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
@@ -77,19 +79,11 @@ html {
     }
     body {
         width: 100%;
+        height: auto;
+        min-height: 100vh;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
-        min-height: 100vh;
-    }
-    #app {
-        width: 100%;
-        min-height: 100vh;
-        overflow-x: hidden;
-        position: relative;
-        transform-origin: top center;
-    }
-    body {
         /* font-family: "AlibabaPuHuiTi-3"; */
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
@@ -97,6 +91,14 @@ html {
         letter-spacing: 0.05em; /* 增加字符间距，相当于 tracking-wider */
         /* 禁用过度滚动的弹性效果 */
         overscroll-behavior: none;
+    }
+    #app {
+        width: 100%;
+        height: auto;
+        /* min-height由JavaScript动态设置 */
+        overflow-x: hidden;
+        position: relative;
+        transform-origin: top center;
     }
 
     video,
@@ -634,6 +636,7 @@ html {
         overflow-x: hidden;
         overflow-y: scroll;
         height: auto;
+        min-height: 100vh;
     }
 
     body {
@@ -649,7 +652,6 @@ html {
     .proportional-scaling-active {
         width: 100%;
         height: auto;
-        min-height: 100vh;
         overflow-y: visible;
     }
 
@@ -657,6 +659,6 @@ html {
         position: relative;
         transform-origin: top left;
         height: auto;
-        min-height: 100vh;
+        /* min-height由JavaScript动态设置 */
     }
 }
