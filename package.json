@@ -1,0 +1,38 @@
+{
+    "name": "dc-enterprise-site",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc -b && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@element-plus/icons-vue": "^2.3.2",
+        "@wangeditor/editor": "^5.1.23",
+        "axios": "^1.11.0",
+        "dayjs": "^1.11.13",
+        "element-plus": "^2.10.6",
+        "pinia": "^3.0.3",
+        "swiper": "^11.2.10",
+        "vue": "^3.5.18",
+        "vue-i18n": "^11.1.11",
+        "vue-router": "^4.5.1"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4.1.11",
+        "@tailwindcss/vite": "^4.1.11",
+        "@types/node": "^24.2.1",
+        "@vitejs/plugin-vue": "^6.0.1",
+        "@vue/tsconfig": "^0.7.0",
+        "autoprefixer": "^10.4.21",
+        "postcss-px-to-viewport": "^1.1.1",
+        "sass-embedded": "^1.90.0",
+        "tailwindcss": "^4.1.11",
+        "typescript": "~5.8.3",
+        "vite": "^7.1.0",
+        "vite-plugin-windicss": "^1.9.4",
+        "vue-tsc": "^3.0.5"
+    }
+}
