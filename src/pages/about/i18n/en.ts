@@ -106,7 +106,7 @@ export default {
       },
       professionalTeam: {
         title: 'Professional Compliance Team',
-        desc: `Our compliance team consists of experts with profound financial and legal expertise and extensive industry experience. They focus on comprehensive risk management, rigorous regulatory review, and client rights protection to ensure the security of client information and assets. The team continuously monitors financial regulatory developments in Hong Kong and globally (e.g., anti-money laundering (AML), know-your-customer (KYC), data privacy, etc.), ensuring the company’s operations always comply with the latest regulatory requirements.  `
+        desc: `Our compliance team consists of experts with profound financial and legal expertise and extensive industry experience. They focus on comprehensive risk management, rigorous regulatory review, and client rights protection to ensure the security of client information and assets. The team continuously monitors financial regulatory developments in Hong Kong and globally (e.g., anti-money laundering (AML), know-your-customer (KYC), data privacy, etc.), ensuring the company's operations always comply with the latest regulatory requirements.  `
       },
       policyFormulation: {
         title: 'Compliance Policy Formulation',

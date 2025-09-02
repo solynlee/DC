@@ -1,13 +1,13 @@
 <template>
   <section class="h-full w-full text-[#072867]">
     <div class="relative">
-      <img src="@/assets/images/strategy/EAM/bg.png" alt="" srcset="" class="h-[20vh] md:h-170 w-full object-cover">
+      <img src="@/assets/images/strategy/EAM/bg.png" alt="" srcset="" class="h-170 w-full object-cover">
       <div class="text-white absolute bottom-0 w-full ">
         <Container type="extra-wide">
           <div class="px-10">
-            <p class="text-sm md:text-5xl font-bold">{{ t('pages.trust.title1') }}
+            <p class="text-5xl font-bold">{{ t('pages.trust.title1') }}
             </p>
-            <p class="text-xl md:text-7xl font-bold mt-2 sm:mt-3 md:mt-4 lg:mt-5 mb-4 sm:mb-6 md:mb-8 lg:mb-10">
+            <p class="text-7xl font-bold mt-2 sm:mt-3 md:mt-4 lg:mt-5 mb-4 sm:mb-6 md:mb-8 lg:mb-10">
               {{ t('pages.trust.title') }}
             </p>
             <div class="w-24 md:w-60  h-1.5 md:h-2 bg-[#A37B24]"></div>
@@ -31,7 +31,7 @@
                       t(item.title) }}</p>
                   <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-60 leading-relaxed">{{
                     t(item.description)
-                  }}
+                    }}
                   </p>
                 </div>
               </div>

@@ -3,15 +3,32 @@
     <!-- 统一顶部栏 - 所有设备都使用相同的布局 -->
     <div class="flex justify-between items-center px-8 py-4">
       <img src="@/assets/images/header/logo.png" alt="logo" class="h-8 w-auto">
-      <div class="flex items-center text-[#072867] text-2xl py-4">
-        <template v-for="(lang, index) in languages" :key="lang.code">
+      <div class="flex items-center text-[#072867] text-2xl py-4 language-select">
+        <!-- <template v-for="(lang, index) in languages" :key="lang.code">
           <button @click="changeLanguage(lang.code)"
             class="w-8 hover:text-[#C1A894] transition-colors duration-200 cursor-pointer"
             :class="{ '!text-[#C1A894] font-bold': currentLanguage === lang.code }">
             {{ lang.label }}
           </button>
           <span v-if="index < languages.length - 1" class="mx-2 text-[#072867]">/</span>
-        </template>
+        </template> -->
+        <button @click="changeLanguage(languages[0].code)"
+          class="w-8 hover:text-[#C1A894] transition-colors duration-200 cursor-pointer"
+          :class="{ '!text-[#C1A894] font-bold': currentLanguage === languages[0].code }">
+          {{ languages[0].label }}
+        </button>
+        <span class="mx-2 text-[#072867]">/</span>
+        <button @click="changeLanguage(languages[1].code)"
+          class="w-8 hover:text-[#C1A894] transition-colors duration-200 cursor-pointer"
+          :class="{ '!text-[#C1A894] font-bold': currentLanguage === languages[1].code }">
+          {{ languages[1].label }}
+        </button>
+        <span class="mx-2 text-[#072867]">/</span>
+        <button @click="changeLanguage(languages[2].code)"
+          class="w-8 language-select-en hover:text-[#C1A894] transition-colors duration-200 cursor-pointer"
+          :class="{ '!text-[#C1A894] font-bold': currentLanguage === languages[2].code }">
+          {{ languages[2].label }}
+        </button>
       </div>
     </div>
 
@@ -208,9 +225,9 @@ const changeLanguage = (lang: LanguageCode) => {
 }
 
 // 移动端菜单控制
-const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
-}
+// const toggleMobileMenu = () => {
+//   isMobileMenuOpen.value = !isMobileMenuOpen.value
+// }
 
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false
@@ -311,6 +328,14 @@ const navItems = [
 
 
 <style scoped>
+.language-select {
+  font-family: 'AlibabaPuHuiTi-3' !important;
+}
+
+.language-select-en {
+  font-family: 'TimesNewRoman' !important;
+}
+
 /* 移动端菜单动画 */
 .mobile-menu-enter-active,
 .mobile-menu-leave-active {

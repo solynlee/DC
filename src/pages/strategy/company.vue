@@ -1,51 +1,49 @@
 <template>
   <section class="h-full w-full text-[#072867]">
     <div class="relative">
-      <img src="@/assets/images/strategy/company/banner.png" alt="" srcset=""
-        class="h-[20vh] md:h-170 w-full object-cover">
+      <img src="@/assets/images/strategy/company/banner.png" alt="" srcset="" class="h-170 w-full object-cover">
       <div class="text-white absolute bottom-0 w-full ">
         <Container type="extra-wide">
           <div class="px-10">
-            <p class="text-sm md:text-5xl font-bold">{{ t('pages.company.title1') }}
+            <p class="text-5xl font-bold">{{ t('pages.company.title1') }}
             </p>
-            <p class="text-xl md:text-7xl font-bold mt-2 sm:mt-3 md:mt-4 lg:mt-5 mb-4 sm:mb-6 md:mb-8 lg:mb-10">
+            <p class="text-7xl font-bold mt-5 mb-10">
               {{ t('pages.company.title') }}
             </p>
-            <div class="w-24 md:w-60  h-1.5 md:h-2 bg-[#A37B24]"></div>
+            <div class="w-60 h-2 bg-[#A37B24]"></div>
           </div>
         </Container>
       </div>
     </div>
 
-    <div class=" py-8 sm:py-12 md:py-16 lg:py-20 bg-[#f7f9fa]">
+    <div class="py-20 bg-[#f7f9fa]">
       <Container type="extra-wide">
         <div class="px-10">
 
 
-          <p class="text-xl sm:text-2xl md:text-3xl font-bold">{{ t('pages.company.subtitle') }}</p>
-          <p class="text-base sm:text-lg md:text-xl my-6 sm:my-8 md:my-10 leading-relaxed">
+          <p class="text-3xl font-bold">{{ t('pages.company.subtitle') }}</p>
+          <p class="text-xl my-10 leading-relaxed">
             {{ t('pages.company.description') }}</p>
-          <p
-            class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6 border-b border-[#1A2E56] pb-2 sm:pb-2.5 md:pb-3 mt-6 sm:mt-8 md:mt-12 lg:mt-16">
+          <p class="text-3xl font-bold mb-6 border-b border-[#1A2E56] pb-3 mt-16">
             {{ t('pages.company.serviceModules.title') }}</p>
           <!-- <p class="text-base sm:text-lg md:text-xl leading-relaxed">
             {{ t('pages.company.serviceModules.content') }}
           </p> -->
-          <div class="px-4 sm:px-8 md:px-16  py-8 sm:py-12 md:py-16 lg:py-20">
+          <div class="px-16 py-20">
             <img :src="images" alt="" class="w-full h-auto" srcset="">
           </div>
-          <p
-            class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6 border-b border-[#1A2E56] pb-2 sm:pb-2.5 md:pb-3 mt-6 sm:mt-8 md:mt-12 lg:mt-16">
+          <p class="text-3xl font-bold mb-6 border-b border-[#1A2E56] pb-3 mt-16">
             {{ t('pages.company.whyChoose.title') }}</p>
-          <div class="flex flex-col lg:flex-row justify-center items-center gap-12">
-            <div class="flex-1 flex justify-center">
-              <img src="@/assets/images/strategy/company/bg.png" alt="" srcset=""
-                class="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-none lg:w-full">
+          <div class="flex flex-row justify-center items-center gap-20">
+            <div class="w-1/2 flex justify-center">
+              <img src="@/assets/images/strategy/company/bg.png" alt="" srcset="" class="w-full max-w-none">
             </div>
-            <div>
-              <p class=" text-3xl font-bold sm:mb-4 leading-tight">
-                {{ t('pages.company.whyChoose.content') }}</p>
-              <p class="text-3xl font-bold mt-6 sm:mt-8 md:mt-10">
+            <div class="w-1/2">
+              <p class="text-3xl font-bold mb-4 leading-tight">
+                {{ t('pages.company.whyChoose.content') }}<br />
+                {{ t('pages.company.whyChoose.contents') }}
+              </p>
+              <p class="text-3xl font-bold mt-10">
                 {{ t('pages.company.whyChoose.partner') }}
               </p>
             </div>
@@ -69,11 +67,11 @@ const { t, locale } = useI18n()
 
 const images = computed(() => {
   if (locale.value === 'zh-CN') {
-    return image3
-  } else if (locale.value === 'zh-TW') {
     return image1
-  } else {
+  } else if (locale.value === 'zh-TW') {
     return image2
+  } else {
+    return image3
   }
 })
 

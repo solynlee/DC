@@ -49,22 +49,25 @@ const containerClass = computed(() => {
 /* 默认容器 - 适合大部分内容 */
 .dc-container--default {
   max-width: 1200px;
+  padding: 0 20px;
 }
 
 /* 宽容器 - 适合需要更多空间的内容 */
 .dc-container--wide {
   max-width: 1400px;
+  padding: 0 24px;
 }
 
 /* 超宽容器 - 适合大屏幕展示 */
 .dc-container--extra-wide {
   max-width: 1448px;
-  padding: 0 6px;
+  padding: 0 12px;
 }
 
 /* 窄容器 - 适合文章阅读等 */
 .dc-container--narrow {
   max-width: 800px;
+  padding: 0 32px;
 }
 
 /* 全宽容器 - 占满整个宽度 */
@@ -72,5 +75,30 @@ const containerClass = computed(() => {
   max-width: none;
 }
 
-/* 统一缩放适配 - 所有设备保持固定宽度以支持比例缩放 */
+/* 统一缩放适配 - 在缩放模式下优化Container布局 */
+.proportional-scaling-active .dc-container {
+  /* 保持居中宽度，但优化内边距适应小屏幕 */
+  /* padding-left: 8px !important;
+  padding-right: 8px !important; */
+}
+
+/* 针对不同容器类型的特殊优化 */
+.proportional-scaling-active .dc-container--extra-wide {
+  /* 超宽容器在小屏幕上减少内边距 */
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+.proportional-scaling-active .dc-container--default,
+.proportional-scaling-active .dc-container--wide {
+  /* 默认和宽容器保持合理的内边距 */
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.proportional-scaling-active .dc-container--narrow {
+  /* 窄容器在小屏幕上适当增加内边距 */
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
 </style>

@@ -286,6 +286,7 @@ export default {
       whyChoose: {
         title: 'Why Choose DC Insurance?',
         content: 'Corporate resilience thrives when unknown risks become quantifiable protection.',
+        contents: '',
         partner: 'DC Insurance—progressing alongside your business!'
       }
 
@@ -356,7 +357,7 @@ export default {
     other: {
       title: 'Value-added Services',
       title1: '',
-      desc: `DC Wealth Group not only fulfils wealth management needs but also delivers diversified services addressing ultra-high-net-worth clients' requirements in asset allocation, lifestyle enhancement, and beyond.`,
+      desc: `DC Wealth Group not only fulfils wealth management needs but also delivers diversified services addressing ultra-high-net-worth clients' requirements in asset allocation, lifestyle enhancement and beyond.`,
       services: {
         title: 'Our services',
         items: [

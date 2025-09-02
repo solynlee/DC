@@ -3,7 +3,7 @@ import { ref } from 'vue'
 // 全局比例缩放配置 - 使用zoom方案
 const SCALE_CONFIG = {
   baseWidth: 1684,   // 设计稿基准宽度
-  minWidth: 320     // 启用比例缩放的最小宽度（320px以上都缩放，覆盖所有设备）
+  minWidth: 120      // 启用比例缩放的最小宽度（120px以上都缩放，覆盖超小屏幕）
 }
 
 // 全局缩放状态
@@ -17,29 +17,34 @@ export function useGlobalScale() {
     // 所有设备都使用比例缩放，保持PC端样式缩小版
     isProportionalScaling.value = true
 
-    // 计算缩放比例，最小缩放比例限制为0.3（防止过小）
-    const scale = Math.max(windowWidth / SCALE_CONFIG.baseWidth, 0.3)
+    // 计算缩放比例，最小缩放比例限制为0.07（支持超小屏幕）
+    const scale = Math.max(windowWidth / SCALE_CONFIG.baseWidth, 0.07)
     scaleRatio.value = scale
 
     const appContainer = document.getElementById('app')
     if (appContainer) {
-      // 使用zoom属性进行等比例缩放
+      // 使用zoom属性进行等比例缩放，确保内容填满屏幕宽度
       appContainer.style.zoom = `${scale}`
-      appContainer.style.width = `${SCALE_CONFIG.baseWidth}px`
+      // 动态计算容器宽度，确保缩放后正好填满屏幕
+      const containerWidth = windowWidth / scale
+      appContainer.style.width = `${containerWidth}px`
+      appContainer.style.maxWidth = 'none'
       appContainer.style.transformOrigin = 'top left'
       appContainer.style.transition = 'zoom 0.3s ease-in-out'
       appContainer.style.minHeight = 'auto'
 
-      // 确保body和html能正常滚动
+      // 确保body和html能正常滚动，特别是小屏幕适配
       document.body.style.width = '100%'
       document.body.style.height = 'auto'
       document.body.style.minHeight = '100vh'
       document.body.style.overflow = 'visible'
-      document.body.style.overflowX = 'hidden'
+      document.body.style.overflowX = 'hidden' // 统一隐藏水平滚动
       document.body.style.overflowY = 'auto'
       document.body.style.margin = '0'
       document.body.style.padding = '0'
 
+      // 确保html也填满宽度
+      document.documentElement.style.width = '100%'
       document.documentElement.style.height = 'auto'
       document.documentElement.style.overflow = 'visible'
       document.documentElement.style.overflowX = 'hidden'
@@ -66,6 +71,7 @@ export function useGlobalScale() {
     if (appContainer) {
       appContainer.style.zoom = '1'
       appContainer.style.width = '100%'
+      appContainer.style.maxWidth = ''
       appContainer.style.transformOrigin = 'top left'
       appContainer.style.minHeight = 'auto'
 
@@ -78,6 +84,7 @@ export function useGlobalScale() {
       document.body.style.margin = '0'
       document.body.style.padding = '0'
 
+      document.documentElement.style.width = ''
       document.documentElement.style.height = 'auto'
       document.documentElement.style.overflow = 'auto'
       document.documentElement.style.overflowX = 'hidden'

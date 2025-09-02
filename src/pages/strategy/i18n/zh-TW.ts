@@ -30,7 +30,7 @@ export default {
         },
         corporateBusiness: {
           title: '公司業務',
-          content: '德萃財富集團作為獨立外部資產管理機構（EAM），與全球多家私人銀行建立穩定合作關係，致力於為客戶提供專業、高效、定制化的資產管理服務，協助實現全球視野下的財富增值目標。' // 若實際有補充內容可填，當前圖中無詳細文本
+          content: '當不確定性成為新常態，德萃保險為企業構建從財務安全到人才穩固的 360° 防護體系 —— 讓風險管理從成本中心轉化為競爭力引擎。' // 若實際有補充內容可填，當前圖中無詳細文本
         }
       },
       offshoreFamilyTrust: {
@@ -221,7 +221,7 @@ export default {
       title: '個人業務',
       title1: 'Personal Insurance Brokerage',
       subtitle: '您人生的每一程，都有我的專業護航。',
-      description: '從教育金儲備到退休夕陽紅，從健康防線到財富永續－個人保險定制化保障方案讓不確定的人生獲得確定性的守護。',
+      description: '從教育金儲備到退休夕陽紅，從健康防線到財富永續——個人保險定制化保障方案讓不確定的人生獲得確定性的守護。',
       serviceMatrix: {
         title: '我們為您設計專屬服務矩陣',
         items: [
@@ -286,7 +286,8 @@ export default {
       },
       whyChoose: {
         title: '為什麼選擇德萃保險？',
-        content: '真正的企業韌性，是把未知風險轉化為定價的保障。',
+        content: '真正的企業韌性,',
+        contents: '是把未知風險轉化為定價的保障。',
         partner: '德萃保險，與您同行！'
       }
 

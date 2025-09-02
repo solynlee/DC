@@ -285,7 +285,8 @@ export default {
       },
       whyChoose: {
         title: '为什么选择德萃保险？',
-        content: '真正的企业韧性，是把未知风险转化为精确定价的保障。',
+        content: '真正的企业韧性，',
+        contents: '是把未知风险转化为精确定价的保障。',
         partner: '德萃保险，与您同行！'
       }
     },

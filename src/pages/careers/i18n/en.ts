@@ -41,9 +41,9 @@ export default {
     careersDetail: {
       title: 'Job Details',
       jobResponse: 'Job Responsibilities',
-      jobCondition: 'Job Conditions',
-      applyWay: 'Apply Way',
-      companyDescription: 'Company Description'
+      jobCondition: 'Qualification Requirements',
+      applyWay: 'Application Method',
+      companyDescription: 'Company Introduction'
     }
   },
 } as const
