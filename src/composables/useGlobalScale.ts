@@ -36,9 +36,13 @@ export function useGlobalScale() {
       appContainer.style.transformOrigin = 'top left'
       appContainer.style.transition = 'zoom 0.3s ease-in-out'
 
-      // 简单的高度设置，确保最小高度为视口高度
-      appContainer.style.minHeight = '100vh'
-      appContainer.style.height = 'auto'
+      // 在缩放环境下直接设置高度，确保填满视口
+      const realViewportHeight = window.innerHeight
+      const scaledHeight = realViewportHeight / scale
+
+      // 直接设置缩放后的高度，确保内容填满整个视口
+      appContainer.style.height = `${scaledHeight}px`
+      appContainer.style.minHeight = `${scaledHeight}px`
 
       // 确保body和html能正常滚动，特别是小屏幕适配
       document.body.style.width = '100%'
@@ -92,8 +96,11 @@ export function useGlobalScale() {
       appContainer.style.width = '100%'
       appContainer.style.maxWidth = ''
       appContainer.style.transformOrigin = 'top left'
-      appContainer.style.minHeight = '100vh'
-      appContainer.style.height = 'auto'
+      // 清理时也恢复缩放后的高度
+      const realViewportHeight = window.innerHeight
+      const scaledHeight = realViewportHeight / 1 // 清理时zoom为1
+      appContainer.style.height = `${scaledHeight}px`
+      appContainer.style.minHeight = `${scaledHeight}px`
 
       document.body.style.width = '100%'
       document.body.style.height = 'auto'

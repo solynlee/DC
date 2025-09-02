@@ -94,8 +94,7 @@ html {
     }
     #app {
         width: 100%;
-        height: auto;
-        /* min-height由JavaScript动态设置 */
+        /* height和min-height完全由JavaScript控制 */
         overflow-x: hidden;
         position: relative;
         transform-origin: top center;
@@ -658,7 +657,6 @@ html {
     .proportional-scaling-active #app {
         position: relative;
         transform-origin: top left;
-        height: auto;
-        /* min-height由JavaScript动态设置 */
+        /* height和min-height完全由JavaScript动态控制 */
     }
 }

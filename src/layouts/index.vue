@@ -51,13 +51,16 @@ onUnmounted(() => {
 /* 固定宽度布局 - 无需额外样式，由全局CSS控制 */
 .layout {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-content {
   width: 100%;
-  min-height: 100vh;
+  flex: 1;
+  background: #f7f7f7;
   position: relative;
 }
 

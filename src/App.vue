@@ -43,7 +43,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="h-full">
     <!-- 错误界面 -->
     <div v-if="hasError" class="min-h-screen flex items-center justify-center bg-gray-50">
       <div class="text-center p-8">

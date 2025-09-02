@@ -69,8 +69,7 @@ body {
 /* 主应用容器 - 简化为基础容器 */
 #app {
     width: 100%;
-    height: auto;
-    /* min-height由JavaScript动态设置 */
+    /* height和min-height完全由JavaScript控制，避免CSS冲突 */
     background: white;
     position: relative;
 }
