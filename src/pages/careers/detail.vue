@@ -46,7 +46,7 @@
         <div class="text-base md:text-xl leading-relaxed tracking-widest">
           <div v-html="formatJobResponse(jobDetail?.applyWay)" class="job-responsibilities"></div>
         </div>
-        <div class="flex items-center gap-3 md:gap-6 border-b border-[#1A2E56] pb-3md:pb-6 mb-3  md:mb-6 mt-6 md:mt-10">
+        <div class="flex items-center gap-3 md:gap-6 border-b border-[#1A2E56] pb-3 md:pb-6 mb-3  md:mb-6 mt-6 md:mt-10">
           <p class="text-lg  md:text-3xl font-bold text-[#082867] flex-1">{{
             t('pages.careersDetail.companyDescription') }}</p>
         </div>

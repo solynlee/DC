@@ -94,7 +94,8 @@
             <img src="@/assets/images/home/futuristic.png" alt="" srcset="" class="w-226 h-124 max-w-none">
             <div class="w-full flex-1 text-left ">
               <div class="flex items-center justify-start gap-7">
-                <img src="@/assets/images/home/icon.png" alt="" srcset="" class="w-10 h-11">
+                <!-- h-11 图像移除高度 -->
+                <img src="@/assets/images/home/icon.png" alt="" srcset="" class="w-10">
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.wealthManagement.title') }}</span>
               </div>
@@ -119,7 +120,8 @@
           <div class="flex flex-row justify-between items-center gap-18">
             <div class="w-full flex-1 text-left ">
               <div class="flex items-center justify-start gap-7">
-                <img src="@/assets/images/home/icon4.png" alt="" srcset="" class="w-10 h-11">
+                  <!-- h-11 图像移除高度 -->
+                <img src="@/assets/images/home/icon4.png" alt="" srcset="" class="w-10">
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.insuranceBrokers.title') }}</span>
               </div>
@@ -146,7 +148,8 @@
             <img src="@/assets/images/home/business.png" alt="" srcset="" class="w-226 h-124 max-w-none">
             <div class="w-full flex-1 text-left">
               <div class="flex items-center justify-start gap-7">
-                <img src="@/assets/images/home/icon5.png" alt="" srcset="" class="w-10 h-11">
+                  <!-- h-11 图像移除高度 -->
+                <img src="@/assets/images/home/icon5.png" alt="" srcset="" class="w-10">
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.business.title') }}</span>
               </div>
@@ -171,7 +174,8 @@
           <div class="flex flex-row justify-between items-center gap-18">
             <div class="w-full flex-1 text-left ">
               <div class="flex items-center justify-start gap-7">
-                <img src="@/assets/images/home/icon3.png" alt="" srcset="" class="w-10 h-11">
+                  <!-- h-11 图像移除高度 -->
+                <img src="@/assets/images/home/icon3.png" alt="" srcset="" class="w-10">
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.nonFinancialServices.title') }}</span>
               </div>

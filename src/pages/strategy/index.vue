@@ -48,10 +48,12 @@
             <div class="relative min-h-[400px]   cursor-pointer hover:scale-105 hover:z-10 transition-all duration-300"
               @click="router.push('/strategy/EAM')">
               <img src="@/assets/images/strategy/2.png" alt="" srcset="" class="w-91 h-134 object-cover rounded-lg">
+              <!-- px-2改px-8 -->
               <div class="absolute top-30 left-0 w-full text-center px-2">
                 <p class="text-3xl font-bold leading-tight  h-30">{{
                   t('pages.strategy.wealthManagement.externalAssetMgmt.title') }} </p>
-                <p class="text-lg opacity-60 leading-relaxed">
+                  <!-- 添加 px-6 text-left -->
+                <p class="text-lg opacity-60 leading-relaxed text-left px-6">
                   {{ t('pages.strategy.wealthManagement.externalAssetMgmt.content') }}</p>
               </div>
 
@@ -94,7 +96,8 @@
                 <p class="text-3xl font-bold  h-30">{{
                   t('pages.strategy.insuranceBrokers.corporateBusiness.title')
                 }} </p>
-                <p class="text-lg opacity-60 leading-relaxed">
+                <!-- 添加text-left -->
+                <p class="text-lg opacity-60 leading-relaxed text-left">
                   {{ t('pages.strategy.insuranceBrokers.corporateBusiness.content') }}</p>
               </div>
             </div>
@@ -134,7 +137,8 @@
               <div class="absolute top-30 left-0 w-full text-center  px-8">
                 <p class="text-3xl font-bold h-30"> {{
                   t('pages.strategy.offshoreFamilyTrust.secretarialServices.title') }}</p>
-                <p class="text-lg opacity-60 leading-relaxed"> {{
+                   <!-- 添加text-left -->
+                <p class="text-lg opacity-60 leading-relaxed text-left"> {{
                   t('pages.strategy.offshoreFamilyTrust.secretarialServices.content') }}</p>
               </div>
             </div>
@@ -180,7 +184,8 @@
                 <p class="text-3xl font-bold   h-30">
                   {{ t('pages.strategy.nonFinancialServices.otherValueAddedServices.title') }}
                 </p>
-                <p class="text-lg opacity-60 leading-relaxed"> {{
+                 <!-- 添加text-left -->
+                <p class="text-lg opacity-60 leading-relaxed text-left"> {{
                   t('pages.strategy.nonFinancialServices.otherValueAddedServices.content') }}</p>
               </div>
             </div>
