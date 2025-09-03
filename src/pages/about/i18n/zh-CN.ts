@@ -48,7 +48,7 @@ export default {
     },
     proposition: {
       title: '核心价值主张',
-      title1: 'Value Proposition ',
+      title1: 'Core Value Proposition',
       subtitle: '德行天下，才萃八方',
       intro: `德萃财富集团以卓越的专业能力和全球化的战略视野，致力于为高净值个人、家族及企业打造全方位、多元化的财富管理方案。由阿里巴巴集团部分创始股东、三捷投资集团有限公司及中港两地资深金融专业人士联合创立，德萃财富以多家族办公室业务为核心，秉承“保障财富安全，传承财富价值”的使命，为客户提供一站式高端财富管理服务。`,
       philosophy: {

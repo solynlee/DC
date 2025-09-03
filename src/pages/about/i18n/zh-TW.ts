@@ -48,7 +48,7 @@ export default {
     },
     proposition: {
       title: '核心價值主張',
-      title1: 'Value Proposition ',
+      title1: 'Core Value Proposition',
       subtitle: '德行天下，才萃八方',
       intro: `德萃財富集團以卓越的專業能力和全球化的戰略視野，致力於為高淨值個人、家族及企業打造全方位、多元化的財富管理方案。由阿裏巴巴集團部分創始股東、三捷投資集團有限公司及中港兩地資深金融專業人士聯合創立，德萃集團以多家族辦公室業務為核心，秉承“保障財富安全，傳承財富價值”的使命，為客戶提供一站式高端財富管理服務。`,
       philosophy: {
