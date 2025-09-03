@@ -220,6 +220,7 @@ html {
     .proportional-scaling-active .el-menu--popup {
         /* 重置zoom影响，使用独立定位 */
         zoom: 1 !important;
+        transform: scale(1) !important;
         /* 固定定位确保不受父容器影响 */
         position: fixed !important;
     }
@@ -606,6 +607,13 @@ html {
         animation: contentSlideIn 0.6s ease-out forwards;
     }
 
+    /* Safari下禁用内容动画避免冲突 */
+    .proportional-scaling-active .content-enter {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
     @keyframes contentSlideIn {
         from {
             opacity: 0;
@@ -617,13 +625,24 @@ html {
         }
     }
 
-    /* 悬停效果增强 */
+    /* 悬停效果增强 - Safari兼容性优化 */
     .hover-lift {
         transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     }
 
+    /* Safari下禁用hover-lift的transform过渡 */
+    .proportional-scaling-active .hover-lift {
+        transition: box-shadow 0.3s ease-out !important;
+    }
+
     .hover-lift:hover {
         transform: translateY(-2px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Safari下的hover效果不使用transform */
+    .proportional-scaling-active .hover-lift:hover {
+        transform: none !important;
         box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
     }
 }
@@ -657,6 +676,16 @@ html {
     .proportional-scaling-active #app {
         position: relative;
         transform-origin: top left;
-        /* height和min-height完全由JavaScript动态控制 */
+        /* Safari兼容性优化 */
+        -webkit-transform-origin: top left;
+        /* 防止Safari下的闪烁和重复渲染 */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        /* Safari zoom优化 */
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+        /* 强制禁用Safari的transform过渡 */
+        -webkit-transition: none !important;
+        transition: none !important;
     }
 }

@@ -1,7 +1,7 @@
 <template>
   <section class="h-full w-full text-[#072867]" v-loading="loading">
     <Container type="extra-wide">
-      <div class="py-20">
+      <div class="py-20 pl-4">
         <div class="h-2 w-40 bg-[#A37B24]"></div>
         <p class="text-3xl font-bold my-10">{{ article?.title }}</p>
         <p class="text-xl text-[#2d5ca9]">{{ dayjs.unix(article?.publishDate).format('YYYY-MM-DD') }}</p>
