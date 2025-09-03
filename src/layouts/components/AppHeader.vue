@@ -330,6 +330,7 @@ const navItems = [
 <style scoped>
 .language-select {
   font-family: 'AlibabaPuHuiTi-3' !important;
+  line-break: auto;
 }
 
 .language-select-en {

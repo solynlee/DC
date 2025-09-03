@@ -128,34 +128,34 @@ export default {
           {
             corporation: `DC Wealth Management (HK) Limited`,
             relationship: `DC Wealth Management (HK) Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong`,
-            license: 'Under the Securities and Futures Ordinance licensed to conduct Type 1(Dealing in securities), Type 4(Advising on securities) and Type 9(Asset management) regulated activities(CE No.: BFT276)',
-            service: 'DC Wealth Management (HK) Limited provides family office and external asset management (EAM) services. The services provided under the Type 9 license are for professional investors only.'
+            license: `Under the Securities and Futures Ordinance licensed to conduct Type 1 (Dealing in securities), Type 4 (Advising on securities) and Type 9 (Asset management) regulated activities (CE No.: BFT276)`,
+            service: `DC Wealth Management (HK) Limited provides family office and external asset management (EAM) services. The services provided under the Type 9 license are for professional investors only.`
           },
           {
-            corporation: 'DC Insurance Consulting Limited',
+            corporation: `DC Insurance Consulting Limited`,
             corporation2: '',
-            relationship: 'DC Insurance Consulting Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong',
-            license: 'Insurance Broker Company under the Insurance Ordinance to conduct General & Long Term Business(including Linked Long Term Business) related regulated activities(License No.: FB1497) and a Registered Principal Intermediary under the Mandatory Provident Fund Schemes Ordinance to conduct regulated activities(MPF Registration No.IC000890)',
-            service: 'DC Insurance Consulting Limited provides insurance brokerage individual business and insurance brokerage company business.'
+            relationship: `DC Insurance Consulting Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong`,
+            license: `Insurance Broker Company under the Insurance Ordinance to conduct General & Long Term Business (including Linked Long Term Business) related regulated activities (License No.: FB1497) and a Registered Principal Intermediary under the Mandatory Provident Fund Schemes Ordinance to conduct regulated activities (MPF Registration No. IC000890)`,
+            service: `DC Insurance Consulting Limited provides insurance brokerage individual business and insurance brokerage company business.`
           },
           {
             corporation: 'China Hong Kong Wealth Management Limited ',
             corporation2: '',
-            relationship: 'China Hong Kong Wealth Management Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong',
-            license: 'Insurance Broker Company under the Insurance Ordinance to conduct Long Term Business(including Linked Long Term Business) related regulated activities(License No.: FB1248)',
-            service: 'China Hong Kong Wealth Management Limited provides insurance brokerage individual business and insurance brokerage company business.'
+            relationship: `China Hong Kong Wealth Management Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong`,
+            license: `Insurance Broker Company under the Insurance Ordinance to conduct Long Term Business (including Linked Long Term Business) related regulated activities (License No.: FB1248)`,
+            service: `China Hong Kong Wealth Management Limited provides insurance brokerage individual business and insurance brokerage company business.`
           },
           {
             corporation: 'DC Trust Asia Limited',
-            relationship: 'DC Trust Asia Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong',
-            license: 'Licensed Trust or Company Service Provider under the Anti-Money Laundering and Counter-Terrorist Financing Ordinance and Trustee Ordinance to carries on a company or trust service business (License No.: TC000283)',
-            service: 'DC Trust Asia Limited provides offshore trust services.'
+            relationship: `DC Trust Asia Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong`,
+            license: `Licensed Trust or Company Service Provider under the Anti-Money Laundering and Counter-Terrorist Financing Ordinance and Trustee Ordinance to carries on a company or trust service business (License No.: TC000283)`,
+            service: `DC Trust Asia Limited provides offshore trust services.`
           },
           {
-            corporation: 'DC Fiduciary Services Limited',
-            relationship: 'DC Fiduciary Services Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong',
-            license: 'Licensed Trust or Company Service Provider under the Anti-Money Laundering and Counter-Terrorist Financing Ordinance to carries on a company service business (License No.: TC002271)',
-            service: 'DC Fiduciary Services Limited provides company secretarial service.'
+            corporation: `DC Fiduciary Services Limited`,
+            relationship: `DC Fiduciary Services Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong`,
+            license: `Licensed Trust or Company Service Provider under the Anti-Money Laundering and Counter-Terrorist Financing Ordinance to carries on a company service business (License No.: TC002271)`,
+            service: `DC Fiduciary Services Limited provides company secretarial service.`
           }
         ]
       },

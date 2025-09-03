@@ -41,9 +41,11 @@
 /* 中文环境 */
 [data-lang="zh-CN"] {
     font-family: var(--font-zh) !important;
+    line-break: anywhere;
 }
 [data-lang="zh-TW"] {
     font-family: var(--font-zh) !important;
+    line-break: anywhere;
 }
 
 /* 英文环境 */
