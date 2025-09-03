@@ -17,8 +17,9 @@
 
 .rich-text-content p {
     display: block !important;
-    margin: 1em 0 !important;
+    margin: 1em 0 1em 1em !important;
     line-height: 1.6 !important;
+    text-indent: -1em;
 }
 
 .rich-text-content h1 {
