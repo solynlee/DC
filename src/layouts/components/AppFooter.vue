@@ -14,7 +14,7 @@
           </span>
         </div>
         <div class="flex-1  px-20  text-white opacity-60 ">
-          <p class="mb-4 " v-if="title">{{ t(title) }}</p>
+          <p class="mb-4 text-algin-justify"  v-if="title">{{ t(title) }}</p>
           <p v-if="title2">{{ t(title2) }}</p>
         </div>
         <div class="flex items-center justify-end gap-4">

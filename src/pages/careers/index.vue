@@ -63,7 +63,7 @@
         <p class="text-xl mt-16 mb-30 font-medium">
           {{ t('pages.careers.principles.closing') }}</p>
         <div ref="jobListRef" class="flex items-center gap-6 border-b border-[#1A2E56] pb-6 mb-4">
-          <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10 h-10">
+          <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10">
           <p class="text-3xl font-bold">{{ t('pages.careers.jobOpenings.title') }}</p>
         </div>
         <div class="grid grid-cols-3 gap-6 py-10">

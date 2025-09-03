@@ -3,7 +3,7 @@ export default {
     contact: {
       "title": "聯繫我們",
       "titleEn": "Contact Us",
-      "company": "德萃财富管理(香港)有限公司",
+      "company": "德萃财富管理（香港）有限公司",
       "companyEn": "DC Wealth Management (HK) Limited",
       "tel": "電話",
       "telNumber": "(852)2115 9097",

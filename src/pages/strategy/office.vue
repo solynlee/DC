@@ -19,8 +19,9 @@
       <Container type="extra-wide">
         <div class="px-10">
           <p class="text-2xl font-bold">{{ t('pages.office.subtitle') }}</p>
-          <p class="text-xl mt-8 leading-relaxed">
-            {{ t('pages.office.description') }}</p>
+          <p class="text-xl mt-8 leading-relaxed text-algin-justify">
+            {{ t('pages.office.description') }}
+          </p>
           <p class="text-2xl font-bold mb-6 border-b border-[#1A2E56] pb-3 mt-16">
             {{ t('pages.office.whyChooseUs.title') }}</p>
           <p class="text-xl my-8 leading-relaxed">
@@ -28,7 +29,7 @@
           <div class="grid grid-cols-2  gap-10">
             <template v-for="item in officeList" :key="item.title">
               <div class="flex items-center gap-10 p-10 bg-white shadow-xs rounded-lg">
-                <img :src="item.image" alt="" class="w-14 h-14 flex-shrink-0">
+                <img :src="item.image" alt="" class="w-14 flex-shrink-0">
                 <div class="min-w-0 h-full">
                   <p class="text-2xl font-bold mb-4 leading-tight">{{
                     t(item.title) }}</p>

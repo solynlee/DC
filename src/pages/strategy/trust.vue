@@ -24,7 +24,7 @@
           <div class="grid grid-cols-3 gap-8">
             <template v-for="item in officeList" :key="item.title">
               <div class="flex items-center gap-8 p-8 bg-white shadow-xs rounded-lg">
-                <img :src="item.image" alt="" class="w-14 h-14 flex-shrink-0">
+                <img :src="item.image" alt="" class="w-14 flex-shrink-0">
                 <div class="min-w-0 h-full">
                   <p class="text-2xl font-bold mb-4 leading-tight">
                     {{

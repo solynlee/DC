@@ -106,9 +106,9 @@ export default {
       }
     },
     EAM: {
-      title1: 'External Asset Management (EAM)',
+      title1: 'External Asset Management （EAM）',
       title: '外部資產管理（EAM）服務',
-      description: '德萃財富集團作為獨立外部資產管理機構(EAM)，與全球多家私人銀行建立穩定合作關係，致力於為客戶提供專業、高效、定制化的資產管理服務，協助實現全球視野下的財富增值目標。',
+      description: '德萃財富集團作為獨立外部資產管理機構（EAM），與全球多家私人銀行建立穩定合作關係，致力於為客戶提供專業、高效、定制化的資產管理服務，協助實現全球視野下的財富增值目標。',
       ourAdvantages: {
         title: '我們的優勢',
         content: '作為香港持牌專業機構，我們提供全方位定制化的財富管理與家族服務解決方案：',
@@ -239,7 +239,7 @@ export default {
           },
           {
             name: '健康雙保險',
-            desc: "醫療險(高端直付/海外就醫) {' | '} 重疾險"
+            desc: "醫療險（高端直付/海外就醫） {' | '} 重疾險"
           },
           {
             name: '身故保障',

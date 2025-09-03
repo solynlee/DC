@@ -14,7 +14,7 @@
         <div class="flex-1 text-[#072867] order-1">
           <img src="@/assets/images/about/logo.png" alt="" srcset="" class="h-16">
           <div class="flex items-center gap-6 border-b border-[#1A2E56] pb-6 mb-6 mt-20">
-            <img src="@/assets/images/about/icon.png" alt="" srcset="" class="w-10 h-10">
+            <img src="@/assets/images/about/icon.png" alt="" srcset="" class="w-10">
             <p class="text-3xl font-bold text-[#082867] flex-1">{{
               t('pages.about.coreValue.title') }}</p>
             <div class="flex items-center gap-4 cursor-pointer" @click="handleProposition">
@@ -43,7 +43,7 @@
     <div class="bg-[url('@/assets/images/about/bg3.png')] bg-cover bg-center bg-no-repeat py-30">
       <Container type="extra-wide">
         <div class="flex items-center gap-6 border-b border-[#1A2E56] pb-6 mb-6 mt-20">
-          <img src="@/assets/images/about/icon.png" alt="" srcset="" class="w-10 h-10">
+          <img src="@/assets/images/about/icon.png" alt="" srcset="" class="w-10">
           <p class="text-3xl font-bold text-[#082867] flex-1">{{
             t('pages.about.team.title') }}</p>
           <div class="flex items-center gap-4 cursor-pointer" @click="handleTeam">
@@ -72,7 +72,7 @@
     <Container type="extra-wide">
       <div class="py-20 text-xl text-[#072867]">
         <div class="flex items-center gap-6 border-b border-[#1A2E56] pb-6 mb-6">
-          <img src="@/assets/images/about/icon.png" alt="" srcset="" class="w-10 h-10">
+          <img src="@/assets/images/about/icon.png" alt="" srcset="" class="w-10">
           <p class="text-3xl font-bold text-[#082867] flex-1">{{
             t('pages.about.compliance.title') }}</p>
           <div class="flex items-center gap-4 cursor-pointer" @click="handleValue">
@@ -110,7 +110,7 @@
           </div>
         </div>
         <div class="flex items-center gap-4 border-b border-[#1A2E56] pb-6 mb-6">
-          <img src="@/assets/images/about/icon.png" alt="" srcset="" class="w-10 h-10">
+          <img src="@/assets/images/about/icon.png" alt="" srcset="" class="w-10">
           <p class="text-3xl font-bold text-[#082867] flex-1">{{
             t('pages.about.licenses.title') }}</p>
           <div class="flex items-center gap-4 cursor-pointer" @click="handleLicenses">

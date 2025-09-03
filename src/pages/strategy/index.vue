@@ -20,8 +20,8 @@
           {{ t('pages.strategy.description') }}
         </p>
         <div class="mt-15 px-10" id="wealth-management">
-          <div class="flex items-center gap-6 border-b border-[#1A2E56] :pb-6 mb-4">
-            <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10 h-10">
+          <div class="flex items-center gap-6 border-b border-[#1A2E56] pb-6 mb-4">
+            <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10">
             <p class="text-3xl font-bold">{{ t('pages.strategy.wealthManagement.title') }}
             </p>
           </div>
@@ -63,14 +63,14 @@
         </div>
         <div class="mt-20 px-10" id="insurance-brokers">
           <div class="flex  items-center gap-6 border-b border-[#1A2E56] pb-6 mb-4">
-            <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10 h-10">
+            <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10">
             <p class="text-3xl font-bold">{{ t('pages.strategy.insuranceBrokers.title') }}
             </p>
           </div>
           <p class="text-xl leading-relaxed tracking-widest text-algin-justify">
             {{ t('pages.strategy.insuranceBrokers.content') }}</p>
         </div>
-        <!-- 保险经纪服务区域 -->
+        <!-- 信托与秘书服务 -->
         <div class=" mt-6">
           <!-- 桌面端布局 -->
           <div class="flex gap-4 w-full  text-white">
@@ -105,8 +105,8 @@
         </div>
         <div class=" mt-20 px-10" id="offshore-family-trust">
           <div class="flex items-center gap-6 border-b border-[#1A2E56] pb-6 mb-4">
-            <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10 h-10">
-            <p class=":text-3xl font-bold">{{ t('pages.strategy.offshoreFamilyTrust.title')
+            <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10">
+            <p class="text-3xl font-bold">{{ t('pages.strategy.offshoreFamilyTrust.title')
             }}</p>
           </div>
           <p class="text-xl leading-relaxed tracking-widest text-algin-justify">
@@ -147,7 +147,7 @@
         </div>
         <div class=" mt-20 px-10" id="non-financial-services">
           <div class="flex items-center gap-6 border-b border-[#1A2E56] pb-6 mb-4">
-            <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10 h-10">
+            <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10">
             <p class="text-3xl font-bold">{{ t('pages.strategy.nonFinancialServices.title')
             }}</p>
           </div>

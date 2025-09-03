@@ -29,7 +29,7 @@
           <!-- 投资洞察标题区域 -->
 
           <div class="flex items-center gap-6 border-b border-[#1A2E56] pb-6 mb-8">
-            <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10 h-10 flex-shrink-0">
+            <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10 flex-shrink-0">
             <span class="text-4xl font-bold">{{
               t('pages.insights.investmentInsights.title') }}</span>
           </div>
@@ -48,7 +48,7 @@
                 articles[0].title }}</p>
               <p class="text-2xl mb-12">{{
                 dayjs.unix(articles[0].publishDate).format('YYYY-MM-DD') }}</p>
-              <p class="text-xl mb-12 leading-relaxed line-clamp-4">
+              <p class="text-xl mb-12 leading-relaxed line-clamp-4  text-algin-justify">
                 {{
                   articles[0].abstract }}</p>
               <div
@@ -77,7 +77,7 @@
                 articles[1].title }}</p>
               <p class="text-2xl mb-12">{{
                 dayjs.unix(articles[1].publishDate).format('YYYY-MM-DD') }}</p>
-              <p class="text-xl mb-12 leading-relaxed line-clamp-4">
+              <p class="text-xl mb-12 leading-relaxed line-clamp-4  text-algin-justify">
                 {{
                   articles[1].abstract }}</p>
               <div
@@ -101,7 +101,7 @@
                 articles[2].title }}</p>
               <p class="text-2xl mb-12">{{
                 dayjs.unix(articles[2].publishDate).format('YYYY-MM-DD') }}</p>
-              <p class="text-xl mb-12 leading-relaxed line-clamp-4">
+              <p class="text-xl mb-12 leading-relaxed line-clamp-4  text-algin-justify">
                 {{
                   articles[2].abstract }}</p>
               <div
