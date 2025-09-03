@@ -79,7 +79,7 @@ export default {
     },
     value: {
       title: '资质与合规',
-      title1: 'Value Proposition ',
+      title1: 'Professional Qualifications and Compliance',
       intro: `德萃财富集团（简称：德萃集团）始终秉持合规经营的核心原则，严格遵循香港及国际金融服务行业的相关法律法规。作为持牌机构，我们凭借卓越的合规管理体系和资深专业团队，致力于为客户提供安全、透明、高效的财富管理服务。`,
       licensedQualifications: {
         title: '持牌资质',

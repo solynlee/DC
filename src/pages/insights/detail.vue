@@ -21,7 +21,7 @@
         </div>
       </Container>
     </div> -->
-    <div class="bg-[#f7f9fa]">
+    <div class="bg-[#ebeff4]">
       <Container type="extra-wide">
         <div class="rich-text-content prose max-w-none" v-html="article?.content"></div>
       </Container>

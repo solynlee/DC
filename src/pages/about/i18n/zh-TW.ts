@@ -79,15 +79,15 @@ export default {
     },
     value: {
       title: '資質與合規',
-      title1: 'Value Proposition ',
+      title1: 'Professional Qualifications and Compliance',
       intro: `德萃財富集團（簡稱：德萃集團）始終秉持合規經營的核心原則，嚴格遵循香港及國際金融服務行業的相關法律法規。作為持牌機構，我們憑藉卓越的合規管理體系和資深專業團隊，致力於為客戶提供安全、透明、高效的財富管理服務。`,
       licensedQualifications: {
         title: '持牌資質',
         desc: '德萃財富集團持有以下由香港監管機構頒發的金融服務牌照，涵蓋多個核心業務領域：',
         items: [
           {
-            name: '香港證券及期貨事務監察委員會（SFC）',
-            desc: '1、4、9號牌照',
+            name: '香港證券及期貨事務監察委員會（SFC）1、4、9號牌照',
+            desc: '',
             desc1: '第1類：證券交易',
             desc2: '第4類：就證券提供意見',
             desc3: '第9類：資產管理服務'
@@ -98,7 +98,7 @@ export default {
             desc1: '（包括相連長期保險）的經紀業務'
           },
           {
-            name: '信託或公司服務提供者（TCSP）牌照（由香港公司註冊處發出）',
+            name: '信託或公司服務提供者（TCSP）牌照',
             desc: '（由香港公司註冊處發出）',
             desc1: '包括信託服務及公司秘書服務'
           }

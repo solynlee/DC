@@ -1,7 +1,7 @@
 <template>
   <section class="h-full w-full text-[#072867]">
     <div class="relative">
-      <img src="@/assets/images/about/value/bg.png" alt="" srcset="" class="h-170 w-full object-cover">
+      <img src="@/assets/images/about/value/banner.jpg" alt="" srcset="" class="h-170 w-full object-cover">
       <div class="text-white absolute bottom-0 w-full ">
         <Container type="extra-wide">
           <div class="px-10">

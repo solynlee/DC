@@ -27,7 +27,8 @@
             {{ t('pages.EAM.ourAdvantages.content') }}</p>
           <div class="mt-10">
             <div class="relative mb-2">
-              <div class="h-3 w-3 rounded-full bg-[#345CAC] -left-8 top-1/2 -translate-y-1/2" style="display: inline-block;">
+              <div class="h-3 w-3 rounded-full bg-[#345CAC] -left-8 top-1/2 -translate-y-1/2"
+                style="display: inline-block;">
               </div>
               <p class="text-2xl font-bold" style="display: inline-block;margin-left: 30px;">
                 {{ t('pages.EAM.ourAdvantages.points[0].label') }}</p>
@@ -37,7 +38,8 @@
           </div>
           <div class="mt-10">
             <div class="relative mb-2">
-              <div class="h-3 w-3 rounded-full bg-[#345CAC] -left-8 top-1/2 -translate-y-1/2"  style="display: inline-block;">
+              <div class="h-3 w-3 rounded-full bg-[#345CAC] -left-8 top-1/2 -translate-y-1/2"
+                style="display: inline-block;">
               </div>
               <p class="text-2xl font-bold" style="display: inline-block;margin-left: 30px;">
                 {{ t('pages.EAM.ourAdvantages.points[1].label') }}</p>
@@ -47,7 +49,8 @@
           </div>
           <div class="mt-10">
             <div class="relative mb-2">
-              <div class="h-3 w-3 rounded-full bg-[#345CAC] -left-8 top-1/2 -translate-y-1/2"  style="display: inline-block;">
+              <div class="h-3 w-3 rounded-full bg-[#345CAC] -left-8 top-1/2 -translate-y-1/2"
+                style="display: inline-block;">
               </div>
               <p class="text-2xl font-bold" style="display: inline-block;margin-left: 30px;">
                 {{ t('pages.EAM.ourAdvantages.points[2].label') }}</p>
@@ -71,9 +74,9 @@
 import { useI18n } from 'vue-i18n'
 import Container from '@/components/Container.vue'
 const { t, locale } = useI18n()
-import bg2 from '@/assets/images/strategy/EAM/bg2.png'
-import bg3 from '@/assets/images/strategy/EAM/bg3.png'
-import bg4 from '@/assets/images/strategy/EAM/bg4.png'
+import bg2 from '@/assets/images/strategy/EAM/bg2.jpg'
+import bg3 from '@/assets/images/strategy/EAM/bg3.jpg'
+import bg4 from '@/assets/images/strategy/EAM/bg4.jpg'
 import { computed } from 'vue'
 
 const images = computed(() => {

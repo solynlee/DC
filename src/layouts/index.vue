@@ -60,7 +60,7 @@ onUnmounted(() => {
 .main-content {
   width: 100%;
   flex: 1;
-  background: #f7f7f7;
+  background: #f7f9fb;
   position: relative;
 }
 

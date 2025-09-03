@@ -65,8 +65,7 @@ export function useGlobalScale() {
       // 添加比例缩放状态类
       document.body.classList.add('proportional-scaling-active')
 
-      // 修复Element Plus组件在缩放环境下的定位问题
-      fixElementPlusPopperPositioning()
+
     }
   }
 
@@ -138,55 +137,3 @@ export function useGlobalScale() {
   }
 }
 
-// 修复Element Plus Popper组件在缩放环境下的定位问题
-function fixElementPlusPopperPositioning() {
-  // 等待DOM更新后执行
-  setTimeout(() => {
-    // 查找所有Element Plus popper实例
-    const poppers = document.querySelectorAll('.el-popper, .el-menu--popup')
-    poppers.forEach((popper) => {
-      const element = popper as HTMLElement
-      // 重置zoom，确保popper不受主容器缩放影响
-      element.style.zoom = '1'
-      element.style.position = 'fixed'
-      element.style.zIndex = '9999'
-      element.style.transformOrigin = 'top left'
-    })
-  }, 0)
-
-  // 监听新的popper创建
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      mutation.addedNodes.forEach((node) => {
-        if (node instanceof HTMLElement) {
-          // 检查新添加的节点是否是popper组件
-          if (node.classList.contains('el-popper') ||
-            node.classList.contains('el-menu--popup') ||
-            node.querySelector('.el-popper, .el-menu--popup')) {
-
-            const poppers = node.classList.contains('el-popper') || node.classList.contains('el-menu--popup')
-              ? [node]
-              : node.querySelectorAll('.el-popper, .el-menu--popup')
-
-            poppers.forEach((popper) => {
-              const element = popper as HTMLElement
-              element.style.zoom = '1'
-              element.style.position = 'fixed'
-              element.style.zIndex = '9999'
-              element.style.transformOrigin = 'top left'
-            })
-          }
-        }
-      })
-    })
-  })
-
-  // 开始观察DOM变化
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
-  })
-
-    // 将observer存储起来，以便在需要时清理
-    ; (window as any).__elementPlusObserver = observer
-}
