@@ -41,11 +41,42 @@
 /* 中文环境 */
 [data-lang="zh-CN"] {
     font-family: var(--font-zh) !important;
-    line-break: anywhere;
+    .text-algin-justify{
+        text-align: justify !important;
+    }
+    .line-break-anywhere{
+        line-break: anywhere;
+    }
+    .word-break-keep-all{
+        word-break: keep-all;
+    }
+    .max-width-10rem{
+        max-width: 10rem;
+    }
+    /* line-break: anywhere; */
+    /* .leading-relaxed{
+        text-align: justify !important;
+    } */
+   
+    /* line-break: strict;  
+    overflow-wrap: anywhere; */
 }
 [data-lang="zh-TW"] {
     font-family: var(--font-zh) !important;
-    line-break: anywhere;
+    .text-algin-justify{
+        text-align: justify !important;
+    }
+    .line-break-anywhere{
+        line-break: anywhere;
+    }
+    .word-break-keep-all{
+        word-break: keep-all;
+    }
+    .max-width-10rem{
+        max-width: 10rem;
+    }
+    /* line-break: anywhere; */
+    /* text-align: justify; */
 }
 
 /* 英文环境 */
@@ -114,4 +145,8 @@ body {
 .page-transition-leave-to {
     opacity: 0;
     transform: translateY(-20px);
+}
+.job-condition div{
+    text-indent: -1.4em;
+    margin-left: 1.4em;
 }

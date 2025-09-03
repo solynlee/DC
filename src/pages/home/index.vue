@@ -99,7 +99,7 @@
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.wealthManagement.title') }}</span>
               </div>
-              <p class="text-[#072867] my-10 text-xl leading-relaxed">
+              <p class="text-[#072867] my-10 text-xl leading-relaxed text-algin-justify">
                 {{ t('pages.home.wealthManagement.content') }}</p>
               <div
                 class="inline-flex items-center py-1 px-4 gap-8 mt-6 bg-[#072867] text-white text-base cursor-pointer hover:bg-[#0a3078] transition-colors duration-300"
@@ -125,7 +125,7 @@
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.insuranceBrokers.title') }}</span>
               </div>
-              <p class="text-[#072867] my-10 text-xl leading-relaxed">
+              <p class="text-[#072867] my-10 text-xl leading-relaxed text-algin-justify">
                 {{ t('pages.home.insuranceBrokers.content') }}</p>
               <div
                 class="inline-flex items-center py-1 px-4 gap-8 mt-6 bg-[#072867] text-white text-base cursor-pointer hover:bg-[#0a3078] transition-colors duration-300"
@@ -153,7 +153,7 @@
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.business.title') }}</span>
               </div>
-              <p class="text-[#072867] my-10 text-xl leading-relaxed">
+              <p class="text-[#072867] my-10 text-xl leading-relaxed text-algin-justify">
                 {{ t('pages.home.business.content') }}</p>
               <div
                 class="inline-flex items-center py-1 px-4 gap-8 mt-6 bg-[#072867] text-white text-base cursor-pointer hover:bg-[#0a3078] transition-colors duration-300"
@@ -179,7 +179,7 @@
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.nonFinancialServices.title') }}</span>
               </div>
-              <p class="text-[#072867] my-10 text-xl leading-relaxed">
+              <p class="text-[#072867] my-10 text-xl leading-relaxed text-algin-justify">
                 {{ t('pages.home.nonFinancialServices.content') }}</p>
               <div
                 class="inline-flex items-center py-1 px-4 gap-8 mt-6 bg-[#072867] text-white text-base cursor-pointer hover:bg-[#0a3078] transition-colors duration-300"

@@ -16,7 +16,7 @@
     </div>
     <div class="py-10">
       <Container type="extra-wide">
-        <div class="px-10">
+        <div class="px-6">
 
 
           <p class="text-xl leading-relaxed">
@@ -27,32 +27,32 @@
             {{ t('pages.EAM.ourAdvantages.content') }}</p>
           <div class="mt-10">
             <div class="relative mb-2">
-              <div class="h-3 w-3 rounded-full bg-[#345CAC] absolute -left-8 top-1/2 -translate-y-1/2">
+              <div class="h-3 w-3 rounded-full bg-[#345CAC] -left-8 top-1/2 -translate-y-1/2" style="display: inline-block;">
               </div>
-              <p class="text-2xl font-bold">
+              <p class="text-2xl font-bold" style="display: inline-block;margin-left: 30px;">
                 {{ t('pages.EAM.ourAdvantages.points[0].label') }}</p>
             </div>
-            <p class="text-xl leading-relaxed">
+            <p class="text-xl leading-relaxed" style="margin-left: 40px;">
               {{ t('pages.EAM.ourAdvantages.points[0].desc') }}</p>
           </div>
           <div class="mt-10">
             <div class="relative mb-2">
-              <div class="h-3 w-3 rounded-full bg-[#345CAC] absolute -left-8 top-1/2 -translate-y-1/2">
+              <div class="h-3 w-3 rounded-full bg-[#345CAC] -left-8 top-1/2 -translate-y-1/2"  style="display: inline-block;">
               </div>
-              <p class="text-2xl font-bold">
+              <p class="text-2xl font-bold" style="display: inline-block;margin-left: 30px;">
                 {{ t('pages.EAM.ourAdvantages.points[1].label') }}</p>
             </div>
-            <p class="text-xl leading-relaxed">
+            <p class="text-xl leading-relaxed" style="margin-left: 40px;">
               {{ t('pages.EAM.ourAdvantages.points[1].desc') }}</p>
           </div>
           <div class="mt-10">
             <div class="relative mb-2">
-              <div class="h-3 w-3 rounded-full bg-[#345CAC] absolute -left-8 top-1/2 -translate-y-1/2">
+              <div class="h-3 w-3 rounded-full bg-[#345CAC] -left-8 top-1/2 -translate-y-1/2"  style="display: inline-block;">
               </div>
-              <p class="text-2xl font-bold">
+              <p class="text-2xl font-bold" style="display: inline-block;margin-left: 30px;">
                 {{ t('pages.EAM.ourAdvantages.points[2].label') }}</p>
             </div>
-            <p class="text-xl leading-relaxed">
+            <p class="text-xl leading-relaxed" style="margin-left: 40px;">
               {{ t('pages.EAM.ourAdvantages.points[2].desc') }}
             </p>
           </div>

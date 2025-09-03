@@ -26,11 +26,11 @@
             </div>
           </div>
           <p class="my-10 font-semibold">{{ t('pages.about.coreValue.subtitle') }}</p>
-          <p class="leading-relaxed">
+          <p class="leading-relaxed text-algin-justify">
             {{ t('pages.about.coreValue.desc') }}
           </p>
           <p class="my-10 font-semibold">{{ t('pages.about.coreValue.desc2') }}</p>
-          <p class="leading-relaxed">
+          <p class="leading-relaxed text-algin-justify">
             {{ t('pages.about.coreValue.desc3') }} <br>
             {{ t('pages.about.coreValue.decs4') }}
           </p>
@@ -59,10 +59,10 @@
             <img src="@/assets/images/about/users.png" alt="" srcset="" class="w-200 h-auto">
           </div>
           <div class="order-2 flex-1">
-            <p class="mb-10 leading-relaxed">
+            <p class="mb-10 leading-relaxed text-algin-justify">
               {{ t('pages.about.team.desc') }}
             </p>
-            <p class="leading-relaxed">
+            <p class="leading-relaxed text-algin-justify">
               {{ t('pages.about.team.desc2') }}
             </p>
           </div>

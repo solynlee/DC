@@ -15,7 +15,7 @@
       </div>
     </div>
     <Container type="extra-wide">
-      <div class="px-10 py-20">
+      <div class="px-8 py-20">
         <p class="text-xl mb-20 leading-relaxed">
           {{ t('pages.value.intro') }}</p>
         <p class="text-2xl font-bold mb-6 border-b border-[#1A2E56] pb-3">
@@ -80,17 +80,17 @@
           {{ t('pages.value.licensedQualifications.closing') }}</p>
         <p class="text-2xl font-bold mb-6 border-b border-[#1A2E56] pb-3 mt-20">
           {{ t('pages.value.professionalTeam.title') }}</p>
-        <p class="text-xl leading-relaxed">
+        <p class="text-xl leading-relaxed text-algin-justify">
           {{ t('pages.value.professionalTeam.desc') }}
         </p>
         <p class="text-2xl font-bold mb-6 border-b border-[#1A2E56] pb-3 mt-10">
           {{ t('pages.value.policyFormulation.title') }}</p>
-        <p class="text-xl leading-relaxed">
+        <p class="text-xl leading-relaxed text-algin-justify">
           {{ t('pages.value.policyFormulation.desc') }}
         </p>
         <p class="text-2xl font-bold mb-6 border-b border-[#1A2E56] pb-3 mt-10">
           {{ t('pages.value.riskMonitoring.title') }}</p>
-        <p class="text-xl leading-relaxed">
+        <p class="text-xl leading-relaxed text-algin-justify">
           {{ t('pages.value.riskMonitoring.desc') }}
         </p>
       </div>

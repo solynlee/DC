@@ -8,7 +8,7 @@
           <Container type="extra-wide">
             <div class="px-10">
               <p class="text-5xl font-bold">{{ t('pages.strategy.title1') }}</p>
-              <p class="text-7xl font-bold mt-5 mb-10">{{
+              <p class="text-7xl font-bold mt-5 mb-10 ">{{
                 t('pages.strategy.title2') }}</p>
               <div class="w-60  h-2 bg-[#A37B24]"></div>
             </div>
@@ -16,7 +16,7 @@
         </div>
       </div>
       <Container type="extra-wide">
-        <p class="px-10 py-17  text-2xl leading-relaxed tracking-widest">
+        <p class="px-10 py-17  text-2xl leading-relaxed tracking-widest text-algin-justify">
           {{ t('pages.strategy.description') }}
         </p>
         <div class="mt-15 px-10" id="wealth-management">
@@ -25,7 +25,7 @@
             <p class="text-3xl font-bold">{{ t('pages.strategy.wealthManagement.title') }}
             </p>
           </div>
-          <p class="text-xl leading-relaxed tracking-widest">
+          <p class="text-xl leading-relaxed tracking-widest ">
             {{ t('pages.strategy.wealthManagement.content') }}</p>
         </div>
         <!-- 财富管理服务区域 -->
@@ -41,7 +41,7 @@
                     t('pages.strategy.wealthManagement.familyOffice.title') }}</p>
                   <div class="bg-[#A37B24]  h-2 w-16 mt-2 mb-6"></div>
                 </div>
-                <p class="text-lg opacity-60 leading-relaxed">
+                <p class="text-lg opacity-60 leading-relaxed text-algin-justify">
                   {{ t('pages.strategy.wealthManagement.familyOffice.content') }}</p>
               </div>
             </div>
@@ -53,7 +53,7 @@
                 <p class="text-3xl font-bold leading-tight  h-30">{{
                   t('pages.strategy.wealthManagement.externalAssetMgmt.title') }} </p>
                   <!-- 添加 px-6 text-left -->
-                <p class="text-lg opacity-60 leading-relaxed text-left px-6">
+                <p class="text-lg opacity-60 leading-relaxed text-left px-6 text-algin-justify">
                   {{ t('pages.strategy.wealthManagement.externalAssetMgmt.content') }}</p>
               </div>
 
@@ -67,7 +67,7 @@
             <p class="text-3xl font-bold">{{ t('pages.strategy.insuranceBrokers.title') }}
             </p>
           </div>
-          <p class="text-xl leading-relaxed tracking-widest ">
+          <p class="text-xl leading-relaxed tracking-widest text-algin-justify">
             {{ t('pages.strategy.insuranceBrokers.content') }}</p>
         </div>
         <!-- 保险经纪服务区域 -->
@@ -85,7 +85,7 @@
                     t('pages.strategy.insuranceBrokers.personalBusiness.title') }}</p>
                   <div class="bg-[#A37B24]  h-2 w-16 mt-2 mb-8"></div>
                 </div>
-                <p class="text-xl opacity-60 leading-relaxed">
+                <p class="text-xl opacity-60 leading-relaxed text-algin-justify">
                   {{ t('pages.strategy.insuranceBrokers.personalBusiness.content') }}</p>
               </div>
             </div>
@@ -97,7 +97,7 @@
                   t('pages.strategy.insuranceBrokers.corporateBusiness.title')
                 }} </p>
                 <!-- 添加text-left -->
-                <p class="text-lg opacity-60 leading-relaxed text-left">
+                <p class="text-lg opacity-60 leading-relaxed text-left text-algin-justify">
                   {{ t('pages.strategy.insuranceBrokers.corporateBusiness.content') }}</p>
               </div>
             </div>
@@ -109,7 +109,7 @@
             <p class=":text-3xl font-bold">{{ t('pages.strategy.offshoreFamilyTrust.title')
             }}</p>
           </div>
-          <p class="text-xl leading-relaxed tracking-widest">
+          <p class="text-xl leading-relaxed tracking-widest text-algin-justify">
             {{ t('pages.strategy.offshoreFamilyTrust.content') }}</p>
         </div>
 
@@ -127,7 +127,7 @@
                     t('pages.strategy.offshoreFamilyTrust.offshoreFamilyTrust.title') }}</p>
                   <div class="bg-[#A37B24]  h-2 w-16 mt-2 mb-8"></div>
                 </div>
-                <p class="text-xl opacity-60 leading-relaxed">
+                <p class="text-xl opacity-60 leading-relaxed text-algin-justify">
                   {{ t('pages.strategy.offshoreFamilyTrust.offshoreFamilyTrust.content') }}</p>
               </div>
             </div>
@@ -138,7 +138,7 @@
                 <p class="text-3xl font-bold h-30"> {{
                   t('pages.strategy.offshoreFamilyTrust.secretarialServices.title') }}</p>
                    <!-- 添加text-left -->
-                <p class="text-lg opacity-60 leading-relaxed text-left"> {{
+                <p class="text-lg opacity-60 leading-relaxed text-left text-algin-justify"> {{
                   t('pages.strategy.offshoreFamilyTrust.secretarialServices.content') }}</p>
               </div>
             </div>
@@ -172,7 +172,7 @@
                     t('pages.strategy.nonFinancialServices.identityPlanning.title') }}</p>
                   <div class="bg-[#A37B24] h-2 w-16 mt-2 mb-8"></div>
                 </div>
-                <p class="text-xl opacity-60 leading-relaxed">
+                <p class="text-xl opacity-60 leading-relaxed text-algin-justify">
                   {{ t('pages.strategy.nonFinancialServices.identityPlanning.content') }}</p>
               </div>
             </div>
@@ -185,7 +185,7 @@
                   {{ t('pages.strategy.nonFinancialServices.otherValueAddedServices.title') }}
                 </p>
                  <!-- 添加text-left -->
-                <p class="text-lg opacity-60 leading-relaxed text-left"> {{
+                <p class="text-lg opacity-60 leading-relaxed text-left text-algin-justify"> {{
                   t('pages.strategy.nonFinancialServices.otherValueAddedServices.content') }}</p>
               </div>
             </div>

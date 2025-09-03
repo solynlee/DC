@@ -56,7 +56,7 @@
               {{ t('pages.office.valueProposition.title2') }}
             </p>
 
-            <p class="text-xl pr-20 my-10 leading-relaxed">
+            <p class="text-xl pr-20 my-10 leading-relaxed text-algin-justify">
               {{ t('pages.office.valueProposition.content') }}
             </p>
           </div>

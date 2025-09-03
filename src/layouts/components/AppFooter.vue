@@ -41,11 +41,11 @@
           </thead>
           <tbody>
             <tr v-for="(row, rowIdx) in tableRows" :key="rowIdx" class="text-[#6293e4]">
-              <td class="text-sm font-bold p-8 border-r border-b border-[#2d5eab]">{{ row.corporation }}<br />{{
+              <td class="text-sm font-bold p-8 border-r border-b border-[#2d5eab] word-break-keep-all text-center w-60">{{ row.corporation }}<br />{{
                 row.corporation2 }}</td>
               <td class="text-xs w-60  p-8 border-r border-b border-[#2d5eab]">{{ row.relationship }}</td>
-              <td class="text-xs p-8 border-r border-b border-[#2d5eab]">{{ row.license }}</td>
-              <td class="text-xs  p-8 border-r border-b border-[#2d5eab]">{{ row.service }}</td>
+              <td class="text-xs w-130 p-8 border-r border-b border-[#2d5eab] text-algin-justify">{{ row.license }}</td>
+              <td class="text-xs p-8 border-r border-b border-[#2d5eab] w-90">{{ row.service }}</td>
             </tr>
           </tbody>
           <tfoot>

@@ -18,27 +18,27 @@
       <Container type="extra-wide">
         <div class="px-10 py-30">
           <p class="text-3xl font-bold">{{ t('pages.proposition.subtitle') }}</p>
-          <p class="text-xl my-10 leading-relaxed">
+          <p class="text-xl my-10 leading-relaxed text-algin-justify">
             {{ t('pages.proposition.intro') }}
           </p>
           <p class="text-3xl font-bold border-b border-[#1A2E56] py-5">
             {{ t('pages.proposition.philosophy.title') }}</p>
-          <div class="relative mt-10 pl-10">
-            <div class="w-3 h-3 bg-[#345CAC] rounded-sm absolute -left-2 top-1/2 -translate-y-1/2">
+          <div class="relative mt-10">
+            <div class="w-3 h-3 bg-[#345CAC] rounded-full -left-2 top-1/2 -translate-y-1/2" style="display: inline-block;">
             </div>
-            <p class="text-2xl font-bold">{{
+            <p class="text-2xl font-bold" style="display: inline-block;margin-left: 30px;">{{
               t('pages.proposition.philosophy.items[0].name') }}</p>
           </div>
-          <p class="text-xl mt-2 mb-10 leading-relaxed pl-10">
+          <p class="text-xl mt-2 mb-10 leading-relaxed" style="margin-left: 40px;">
             {{ t('pages.proposition.philosophy.items[0].desc') }}
           </p>
-          <div class="relative mt-10 pl-10">
-            <div class="w-3 h-3 bg-[#345CAC] rounded-sm absolute -left-2 top-1/2 -translate-y-1/2">
+          <div class="relative mt-10">
+            <div class="w-3 h-3 bg-[#345CAC] rounded-full -left-2 top-1/2 -translate-y-1/2" style="display: inline-block;">
             </div>
-            <p class="text-2xl font-bold">{{
+            <p class="text-2xl font-bold" style="display: inline-block;margin-left: 30px;">{{
               t('pages.proposition.philosophy.items[1].name') }}</p>
           </div>
-          <p class="text-xl mt-2 mb-10 leading-relaxed pl-10">
+          <p class="text-xl mt-2 mb-10 leading-relaxed" style="margin-left: 40px;">
             {{ t('pages.proposition.philosophy.items[1].desc') }}
           </p>
         </div>
@@ -56,7 +56,7 @@
               <p class="text-4xl mb-10">
                 {{ t('pages.proposition.groupValue.title1') }}<br />{{ t('pages.proposition.groupValue.title2') }}
               </p>
-              <p class="text-xl my-10 leading-relaxed">
+              <p class="text-xl my-10 leading-relaxed text-algin-justify">
                 {{ t('pages.proposition.groupValue.desc') }}
               </p>
             </div>
