@@ -6,7 +6,7 @@ export default {
       coreValue: {
         title: 'Core Value Proposition',
         subtitle: 'Virtue in the World, Talent in all Directions.',
-        desc: `DC Wealth Group combines unparalleled expertise with a global strategic vision to deliver comprehensive, multi-dimensional wealth management solutions for high-net-worth individuals, families, and enterprises. Co-founded by founding shareholders of Alibaba Group, 3J Investment Group Co., Ltd., and seasoned financial professionals from Mainland China and Hong Kong, we operate at the forefront of multi-family office services. Guided by our mission to "Safeguard Wealth, Perpetuate Legacy," we provide bespoke, high-end wealth management services.`,
+        desc: `DC Wealth Group combines unparalleled expertise with a global strategic vision to deliver comprehensive, multi-dimensional wealth management solutions for high-net-worth individuals, families, and enterprises. Co-founded by founding shareholders of Alibaba Group, 3J Investment Group Co., Ltd., and seasoned financial professionals from Mainland China and Hong Kong, we operate at the forefront of multi-family office services. Guided by our mission to "Safeguard Wealth, Perpetuate Legacy", we provide bespoke, high-end wealth management services.`,
         desc2: '',
         desc3: '',
         decs4: ''
@@ -49,7 +49,7 @@ export default {
       title: 'Core Value Proposition',
       title1: '',
       subtitle: 'Virtue in the World, Talent in all Directions',
-      intro: `DC Wealth Group combines unparalleled expertise with a global strategic vision to deliver comprehensive, multi-dimensional wealth management solutions for high-net-worth individuals, families, and enterprises. Co-founded by founding shareholders of Alibaba Group, 3J Investment Group Co., Ltd., and seasoned financial professionals from Mainland China and Hong Kong, we operate at the forefront of multi-family office services. Guided by our mission to "Safeguard Wealth, Perpetuate Legacy," we provide bespoke, high-end wealth management services.`,
+      intro: `DC Wealth Group combines unparalleled expertise with a global strategic vision to deliver comprehensive, multi-dimensional wealth management solutions for high-net-worth individuals, families, and enterprises. Co-founded by founding shareholders of Alibaba Group, 3J Investment Group Co., Ltd., and seasoned financial professionals from Mainland China and Hong Kong, we operate at the forefront of multi-family office services. Guided by our mission to "Safeguard Wealth, Perpetuate Legacy", we provide bespoke, high-end wealth management services.`,
       philosophy: {
         title: 'Our Philosophy: Virtue in the world, talent in all directions',
         items: [
@@ -64,7 +64,7 @@ export default {
         ]
       },
       groupValue: {
-        title: 'DC Wealth – ',
+        title: 'DC Wealth ',
         title1: 'Your Professional Wealth Manager Around',
         title2: '',
         desc: `At DC Wealth Group, we recognize that wealth transcends asset figures-it embodies client trust and life's value. Therefore, we always integrate security, privacy, and sustainability throughout our entire service process. We defend security with technology, protect privacy with professionalism, and ensure continuity with foresight—allowing wealth to grow steadily while trust endures through generations.`

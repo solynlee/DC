@@ -4,7 +4,7 @@ export default {
       title: 'Investment Strategy',
       title1: 'Investment Strategy',
       title2: '',
-      description: `The company adheres to "Virtue in the World, Talent in all Directions", leveraging rich industry experience, global premium resources, advanced technology systems, and integrated professional legal, taxation, and accounting teams. While empowering clients' capital deployment, DC Wealth Group balances risk and return, obtains benefits, achieves wealth management goals, and perpetuates capital preservation and value inheritance for families and corporations.`,
+      description: `The company adheres to "Virtue in the World, Talent in all Directions", leveraging rich industry experience, global premium resources, advanced technology systems, and integrating professional legal, taxation, and accounting teams. While empowering clients' capital deployment, DC Wealth Group balances risk and return, obtains benefits, achieves wealth management goals. Ultimately, we strive to preserve capital and perpetuate value across generations for both families and corporations.`,
       wealthManagement: {
         title: 'Wealth Management in DC Wealth Group',
         content: `With family office business at our core, we prioritize "guaranteed wealth security" and "wealth inheritance" as our main goals. With senior expert teams and professional resource network, we design one-stop wealth management solutions for high-net-worth clients and provide comprehensive supporting services. We ensure the security, privacy and continuity of clients' assets.`,
@@ -58,7 +58,7 @@ export default {
         },
         otherValueAddedServices: {
           title: 'Value-added Services',
-          content: `DC Wealth Group not only fulfils wealth management needs but also delivers diversified services addressing ultra-high-net-worth clients' requirements in asset allocation, lifestyle enhancement, and beyond.` // If there is actual content to supplement, fill it in; no detailed text in the current image
+          content: `DC Wealth Group not only fulfills wealth management needs but also delivers diversified services addressing ultra-high-net-worth clients' requirements in asset allocation, lifestyle enhancement, and beyond.` // If there is actual content to supplement, fill it in; no detailed text in the current image
         }
       }
     },
@@ -146,7 +146,7 @@ export default {
       title: 'Offshore Trust',
       title1: '',
       subtitle: 'Family Trust: An Strategic Guardian of Wealth Inheritance',
-      description: `A trust is a legal arrangement where the settlor transfers legal title of assets to a licensed trustee, who manages them in accordance with the trust deed for beneficiaries' benefit. As a Hong Kong-licensed trustee, DC Trust partners with elite trust attorneys and tax specialists to deliver triple-layer protection:`,
+      description: `A trust is a legal arrangement where the settlor transfers legal title of assets to a licensed trustee, who manages them in accordance with the trust deed for beneficiaries' benefit. As a Hong Kong licensed trustee, DC Trust partners with elite trust attorneys and tax specialists to deliver triple-layer protection:`,
       features: [
         {
           name: 'Control Preservation',
@@ -252,7 +252,7 @@ export default {
         points: [
           'Whole-market product selection with all insurer access',
           'Claims specialists with legal support channels',
-          'Lifetime dedicated advisor, available around the clock to respond to any inquiries.'
+          'Lifetime dedicated advisor, available around the clock to respond to any inquiries'
         ],
         partner: 'DC Insurance partners with you every step.'
       }
@@ -300,11 +300,11 @@ export default {
         items: [
           {
             name: 'Talent-Based Immigration Fast-Tracking',
-            desc: `Accurately match elite, high-caliber, and specialized talent programs through more efficient application processes for Hong Kong/overseas residency.`
+            desc: `Accurately match Quality Migrant Admission Scheme, Top Talent Pass Scheme, Admission Scheme for Mainland Talents and Professionals through more efficient application processes for Hong Kong/overseas residency.`
           },
           {
             name: 'Investment-Linked Residency',
-            desc: `Utilizing Hong Kong's Capital Investment Entrant Scheme for residency accessing dual residency-asset benefits with lower investment thresholds.`
+            desc: `Utilizing Hong Kong's New Capital Investment Entrant Scheme for residency accessing dual residency-asset benefits with lower investment thresholds.`
           },
           {
             name: 'Education and Identity Synchronized Planning',
@@ -357,7 +357,7 @@ export default {
     other: {
       title: 'Value-added Services',
       title1: '',
-      desc: `DC Wealth Group not only fulfils wealth management needs but also delivers diversified services addressing ultra-high-net-worth clients' requirements in asset allocation, lifestyle enhancement and beyond.`,
+      desc: `DC Wealth Group not only fulfills wealth management needs but also delivers diversified services addressing ultra-high-net-worth clients' requirements in asset allocation, lifestyle enhancement and beyond.`,
       services: {
         title: 'Our services',
         items: [

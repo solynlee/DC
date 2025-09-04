@@ -50,7 +50,8 @@ export default {
         },
         qualifications: {
           title: '资质与合规',
-          content: '以合规经营为核心原则'
+          content: '以合规经营为核心原则',
+          content2:''
         }
       }
     }

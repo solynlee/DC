@@ -49,7 +49,8 @@ export default {
         },
         qualifications: {
           title: 'Professional Qualifications and Compliance-First Framework',
-          content: '"Compliance-First" as our foundational principle'
+          content: '"Compliance-First" ',
+          content2:'as our foundational principle'
         }
       }
     }

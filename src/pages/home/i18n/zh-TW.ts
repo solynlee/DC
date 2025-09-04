@@ -50,7 +50,8 @@ export default {
         },
         qualifications: {
           title: '資質與合規',
-          content: '以合規經營為核心原則'
+          content: '以合規經營為核心原則',
+          content2:''
         }
       }
     }

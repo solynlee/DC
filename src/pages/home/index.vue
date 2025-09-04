@@ -238,6 +238,8 @@
                   t('pages.home.whyChooseUs.qualifications.title') }}</p>
                 <p class="text-lg leading-relaxed">{{
                   t('pages.home.whyChooseUs.qualifications.content') }}</p>
+                  <p class="text-lg leading-relaxed">{{
+                  t('pages.home.whyChooseUs.qualifications.content2') }}</p>
               </div>
 
             </div>

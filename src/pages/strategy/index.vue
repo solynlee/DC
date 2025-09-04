@@ -49,11 +49,15 @@
               @click="router.push('/strategy/EAM')">
               <img src="@/assets/images/strategy/2.png" alt="" srcset="" class="w-91 h-134 object-cover rounded-lg">
               <!-- px-2改px-8 -->
-              <div class="absolute top-30 left-0 w-full text-center px-2">
-                <p class="text-3xl font-bold leading-tight  h-30">{{
-                  t('pages.strategy.wealthManagement.externalAssetMgmt.title') }} </p>
+              <div class="absolute top-30 left-0 w-full px-8">
+                <div class="h-30">
+                  <p class="text-3xl font-bold leading-tight mb-4  white-space-nowrap">{{ t('pages.strategy.wealthManagement.externalAssetMgmt.title') }}</p>
+                  <div class="bg-[#A37B24]  h-2 w-16 mt-2 mb-6"></div>
+                </div>
+                <!-- <p class="text-3xl font-bold leading-tight h-30 white-space-nowrap">{{
+                  t('pages.strategy.wealthManagement.externalAssetMgmt.title') }} </p> -->
                   <!-- 添加 px-6 text-left -->
-                <p class="text-lg opacity-60 leading-relaxed text-left px-6 text-algin-justify">
+                <p class="text-lg opacity-60 leading-relaxed text-left text-algin-justify">
                   {{ t('pages.strategy.wealthManagement.externalAssetMgmt.content') }}</p>
               </div>
 
@@ -61,6 +65,8 @@
           </div>
 
         </div>
+
+
         <div class="mt-20 px-10" id="insurance-brokers">
           <div class="flex  items-center gap-6 border-b border-[#1A2E56] pb-6 mb-4">
             <img src="@/assets/images/strategy/icon.png" alt="" srcset="" class="w-10">
@@ -92,10 +98,14 @@
             <div class="relative min-h-[400px]  cursor-pointer hover:scale-105 hover:z-10 transition-all duration-300"
               @click="router.push('/strategy/company')">
               <img src="@/assets/images/strategy/5.png" alt="" srcset="" class="w-91 h-134 object-cover rounded-lg">
-              <div class="absolute top-30 left-0 w-full text-center  px-8 ">
-                <p class="text-3xl font-bold  h-30">{{
+              <div class="absolute top-30 left-0 w-full px-8 ">
+                <div class="h-30">
+                  <p class="text-3xl font-bold mb-4">{{ t('pages.strategy.insuranceBrokers.corporateBusiness.title') }}</p>
+                  <div class="bg-[#A37B24]  h-2 w-16 mt-2 mb-8"></div>
+                </div>
+                <!-- <p class="text-3xl font-bold  h-30">{{
                   t('pages.strategy.insuranceBrokers.corporateBusiness.title')
-                }} </p>
+                }} </p> -->
                 <!-- 添加text-left -->
                 <p class="text-lg opacity-60 leading-relaxed text-left text-algin-justify">
                   {{ t('pages.strategy.insuranceBrokers.corporateBusiness.content') }}</p>
@@ -134,9 +144,13 @@
             <div class="relative min-h-[400px]  cursor-pointer hover:scale-105 hover:z-10 transition-all duration-300"
               @click="router.push('/strategy/services')">
               <img src="@/assets/images/strategy/10.png" alt="" srcset="" class=" h-134 w-91 object-cover rounded-lg">
-              <div class="absolute top-30 left-0 w-full text-center  px-8">
-                <p class="text-3xl font-bold h-30"> {{
-                  t('pages.strategy.offshoreFamilyTrust.secretarialServices.title') }}</p>
+              <div class="absolute top-30 left-0 w-full px-8">
+                <div class="h-30">
+                  <p class="text-3xl font-bold mb-4">{{ t('pages.strategy.offshoreFamilyTrust.secretarialServices.title') }}</p>
+                  <div class="bg-[#A37B24]  h-2 w-16 mt-2 mb-8"></div>
+                </div>
+                <!-- <p class="text-3xl font-bold h-30"> {{
+                  t('pages.strategy.offshoreFamilyTrust.secretarialServices.title') }}</p> -->
                    <!-- 添加text-left -->
                 <p class="text-lg opacity-60 leading-relaxed text-left text-algin-justify"> {{
                   t('pages.strategy.offshoreFamilyTrust.secretarialServices.content') }}</p>
@@ -180,10 +194,14 @@
             <div class=" relative min-h-[400px]  cursor-pointer hover:scale-105 hover:z-10 transition-all duration-300"
               @click="router.push('/strategy/other')">
               <img src="@/assets/images/strategy/8.png" alt="" srcset="" class="w-91 h-134  object-cover rounded-lg">
-              <div class="absolute top-30 left-0 w-full text-center  leading-tight px-8">
-                <p class="text-3xl font-bold   h-30">
+              <div class="absolute top-30 left-0 w-full leading-tight px-8">
+                <div class="h-30">
+                  <p class="text-3xl font-bold mb-4">{{ t('pages.strategy.nonFinancialServices.otherValueAddedServices.title')  }}</p>
+                  <div class="bg-[#A37B24]  h-2 w-16 mt-2 mb-8"></div>
+                </div>
+                <!-- <p class="text-3xl font-bold   h-30">
                   {{ t('pages.strategy.nonFinancialServices.otherValueAddedServices.title') }}
-                </p>
+                </p> -->
                  <!-- 添加text-left -->
                 <p class="text-lg opacity-60 leading-relaxed text-left text-algin-justify"> {{
                   t('pages.strategy.nonFinancialServices.otherValueAddedServices.content') }}</p>

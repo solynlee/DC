@@ -111,7 +111,7 @@
             type="tel" :placeholder="t('pages.contact.form.telephone')" :disabled="isSubmitting">
         </div>
         <div class="bg-white h-24 flex items-start px-4 py-3 border border-[#D0E0ED] mt-6">
-          <span class="text-xl font-bold flex-shrink-0 mt-1">{{
+          <span class="text-xl font-bold flex-shrink-0">{{
             t('pages.contact.form.message')
             }}：</span>
           <textarea v-model="formData.message"
