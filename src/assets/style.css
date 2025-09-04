@@ -72,6 +72,9 @@ html {
         width: 100%;
         height: auto;
         min-height: 100vh;
+        /* Safari视口高度优化 */
+        min-height: 100dvh; /* 动态视口高度 */
+        min-height: 100vh; /* 备选方案 */
         margin: 0;
         padding: 0;
         overflow-x: hidden;
@@ -81,6 +84,9 @@ html {
         width: 100%;
         height: auto;
         min-height: 100vh;
+        /* Safari视口高度优化 */
+        min-height: 100dvh; /* 动态视口高度，更适合移动设备 */
+        min-height: 100vh; /* 备选方案 */
         margin: 0;
         padding: 0;
         overflow-x: hidden;
@@ -598,6 +604,9 @@ html {
     /* 页面容器基础样式 */
     .page-container {
         min-height: 100vh;
+        /* Safari视口高度优化 */
+        min-height: 100dvh; /* 动态视口高度 */
+        min-height: 100vh; /* 备选方案 */
         position: relative;
         overflow-x: hidden;
     }
@@ -655,6 +664,9 @@ html {
         overflow-y: scroll;
         height: auto;
         min-height: 100vh;
+        /* Safari视口高度优化 */
+        min-height: 100dvh; /* 动态视口高度 */
+        min-height: 100vh; /* 备选方案 */
     }
 
     body {
@@ -664,6 +676,9 @@ html {
         padding: 0;
         height: auto;
         min-height: 100vh;
+        /* Safari视口高度优化 */
+        min-height: 100dvh; /* 动态视口高度 */
+        min-height: 100vh; /* 备选方案 */
     }
 
     /* 比例缩放状态下的统一优化 */
@@ -687,5 +702,60 @@ html {
         /* 强制禁用Safari的transform过渡 */
         -webkit-transition: none !important;
         transition: none !important;
+    }
+
+    /* Safari背景效果兼容性优化 */
+    @supports (-webkit-backdrop-filter: blur(4px)) or
+        (backdrop-filter: blur(4px)) {
+        /* Safari特有的backdrop-filter支持 */
+        .safari-backdrop-blur {
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+        }
+    }
+
+    /* Safari hover效果优化 */
+    @media screen and (max-width: 768px) {
+        /* 移动端Safari禁用hover transform效果 */
+        .safari-hover-safe:hover {
+            transform: none !important;
+            -webkit-transform: none !important;
+        }
+
+        /* 移动端使用active替代hover */
+        .safari-hover-safe:active {
+            transform: scale(0.98);
+            -webkit-transform: scale(0.98);
+            transition: transform 0.2s ease-out;
+            -webkit-transition: -webkit-transform 0.2s ease-out;
+        }
+    }
+
+    /* Safari渐变背景优化 */
+    .safari-gradient-bg {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(7, 40, 103, 0.8) 50%,
+            rgba(7, 40, 103, 1) 100%
+        );
+    }
+
+    /* Safari兼容性检测和应用 */
+    @supports (-webkit-appearance: none) {
+        /* Safari特有的样式优化 */
+        .safari-optimized {
+            /* 强制使用标准渲染模式 */
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+            /* 优化文字渲染 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            /* 防止Safari的渲染闪烁 */
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
     }
 }

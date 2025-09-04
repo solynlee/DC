@@ -13,6 +13,7 @@ const isProportionalScaling = ref(false)
 
 // 存储清理函数
 let cleanupResize: (() => void) | null = null
+let cleanupVisualViewport: (() => void) | null = null
 
 // 检测Safari浏览器（优化版检测逻辑）
 const isSafari = (): boolean => {
@@ -20,6 +21,27 @@ const isSafari = (): boolean => {
   // 更准确的Safari检测：iOS设备或包含Safari但不包含Chrome/Edg的UA
   return /iPad|iPhone|iPod/.test(ua) ||
     (/Safari/.test(ua) && !/Chrome|Edg/.test(ua))
+}
+
+// Safari视口高度优化函数
+const getSafariViewportHeight = (): number => {
+  if (!isSafari()) {
+    return window.innerHeight
+  }
+
+  // 优先使用visualViewport API（Safari 13+支持）
+  if (window.visualViewport) {
+    return window.visualViewport.height
+  }
+
+  // 备选方案：使用document.documentElement.clientHeight
+  if (document.documentElement && document.documentElement.clientHeight) {
+    return document.documentElement.clientHeight
+  }
+
+  // 最后备选：使用window.innerHeight但减去一个缓冲值
+  const estimatedToolbarHeight = 50 // 估算地址栏/工具栏高度
+  return Math.max(window.innerHeight - estimatedToolbarHeight, window.innerHeight * 0.9)
 }
 
 export function useGlobalScale() {
@@ -81,7 +103,7 @@ export function useGlobalScale() {
         appContainer.style.maxWidth = 'none'
 
         // 在缩放环境下直接设置高度，确保填满视口
-        const realViewportHeight = window.innerHeight
+        const realViewportHeight = getSafariViewportHeight()
         const scaledHeight = realViewportHeight / scale
 
         // 直接设置缩放后的高度，确保内容填满整个视口
@@ -139,12 +161,40 @@ export function useGlobalScale() {
     // 监听窗口大小变化
     window.addEventListener('resize', handleResize, { passive: true })
 
+    // Safari特殊处理：监听visualViewport变化
+    if (isSafari() && window.visualViewport) {
+      const handleVisualViewportChange = () => {
+        if (resizeTimeout) {
+          clearTimeout(resizeTimeout)
+        }
+        resizeTimeout = window.setTimeout(() => {
+          updateProportionalScale()
+          resizeTimeout = null
+        }, 100) // visualViewport变化使用较短的延迟
+      }
+
+      window.visualViewport.addEventListener('resize', handleVisualViewportChange)
+      window.visualViewport.addEventListener('scroll', handleVisualViewportChange)
+
+      cleanupVisualViewport = () => {
+        if (window.visualViewport) {
+          window.visualViewport.removeEventListener('resize', handleVisualViewportChange)
+          window.visualViewport.removeEventListener('scroll', handleVisualViewportChange)
+        }
+      }
+    }
+
     // 存储清理函数
     cleanupResize = () => {
       window.removeEventListener('resize', handleResize)
       if (resizeTimeout) {
         clearTimeout(resizeTimeout)
         resizeTimeout = null
+      }
+      // 清理visualViewport监听器
+      if (cleanupVisualViewport) {
+        cleanupVisualViewport()
+        cleanupVisualViewport = null
       }
     }
   }
@@ -157,6 +207,12 @@ export function useGlobalScale() {
     if (cleanupResize) {
       cleanupResize()
       cleanupResize = null
+    }
+
+    // 清理visualViewport监听器
+    if (cleanupVisualViewport) {
+      cleanupVisualViewport()
+      cleanupVisualViewport = null
     }
 
     // 清理缩放效果
@@ -173,7 +229,7 @@ export function useGlobalScale() {
       appContainer.style.transformOrigin = 'top left'
 
       // 清理时也恢复缩放后的高度
-      const realViewportHeight = window.innerHeight
+      const realViewportHeight = getSafariViewportHeight()
       const scaledHeight = realViewportHeight / 1 // 清理时缩放为1
       appContainer.style.height = `${scaledHeight}px`
       appContainer.style.minHeight = `${scaledHeight}px`

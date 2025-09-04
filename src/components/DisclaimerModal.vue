@@ -152,7 +152,7 @@ defineExpose({
   flex: 1;
   overflow-y: auto;
   padding: 32px;
-  max-height: 65vh;
+  max-height: 50vh;
   background: #ffffff;
 }
 

@@ -58,12 +58,20 @@
 
                   <div class="grid grid-cols-3 gap-8">
                     <!-- 桌面端动态新闻卡片 -->
-                    <div v-for="item in newsData" :key="item.id"
-                      class="group bg-gradient-to-b from-white/20 via-[#072867]/80 to-[#072867] backdrop-blur-sm rounded-lg overflow-hidden hover:from-white/30 hover:via-[#072867]/90 hover:to-[#072867] transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
-                      @click="handleNewsClick(item.articleCode)">
-                      <div class="aspect-[4/3] overflow-hidden">
-                        <img :src="item.conver" :alt="item.title"
-                          class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div v-for="item in newsData" :key="item.id" :class="[
+                      'group rounded-lg overflow-hidden cursor-pointer safari-optimized',
+                      isSafari
+                        ? 'safari-gradient-bg safari-hover-safe safari-card-scale'
+                        : 'bg-gradient-to-b from-white/20 via-[#072867]/80 to-[#072867] backdrop-blur-sm hover:from-white/30 hover:via-[#072867]/90 hover:to-[#072867] transition-all duration-300 hover:transform hover:scale-105'
+                    ]" @click="handleNewsClick(item.articleCode)">
+                      <div :class="[
+                        'overflow-hidden',
+                        isSafari ? 'safari-image-container' : 'aspect-[4/3]'
+                      ]">
+                        <img :src="item.conver" :alt="item.title" :class="[
+                          'w-full object-cover',
+                          isSafari ? 'safari-image-style' : 'h-full'
+                        ]">
                       </div>
                       <div class="p-6">
                         <div class="w-8 h-1 bg-[#A37B24] mb-3"></div>
@@ -113,8 +121,16 @@ import router from '@/router'
 import { useCustomApiWithAutoRefresh } from '@/utils/useAutoRefreshApi'
 import api from '@/utils/http'
 import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 
 const { t } = useI18n()
+
+// Safari检测计算属性
+const isSafari = computed(() => {
+  const ua = navigator.userAgent
+  return /iPad|iPhone|iPod/.test(ua) ||
+    (/Safari/.test(ua) && !/Chrome|Edg/.test(ua))
+})
 
 
 // 新闻数据
@@ -165,9 +181,137 @@ const handleNewsClick = (code: string) => {
 /* 确保最小高度，允许内容扩展 */
 section {
   min-height: 100vh;
+  /* Safari视口高度优化 */
+  min-height: 100dvh;
+  min-height: 100vh;
+  /* 备选方案 */
   background-attachment: scroll;
   background-size: cover;
   background-position: center;
+}
+
+/* Safari背景渐变优化 */
+.safari-gradient-bg {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(7, 40, 103, 0.8) 50%,
+      rgba(7, 40, 103, 1) 100%);
+  /* Safari兼容性 */
+  -webkit-background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(7, 40, 103, 0.8) 50%,
+      rgba(7, 40, 103, 1) 100%);
+}
+
+/* Safari backdrop-blur备选方案 */
+.safari-backdrop-fallback {
+  position: relative;
+}
+
+.safari-backdrop-fallback::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Safari hover效果优化 */
+@media screen and (max-width: 768px) {
+  .safari-hover-safe:hover {
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+
+  .safari-hover-safe:active {
+    transform: scale(0.98);
+    -webkit-transform: scale(0.98);
+    transition: transform 0.2s ease-out;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+  }
+}
+
+/* Safari渲染优化 */
+.safari-optimized {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Safari图片容器备选方案 */
+.safari-image-container {
+  position: relative;
+  width: 100%;
+  /* 增加高度以匹配4:3比例，接近原始aspect-[4/3]的效果 */
+  height: 260px;
+  /* 增加高度 */
+  overflow: hidden;
+  background-color: #f0f0f0;
+  /* 加载时的背景色 */
+  /* 防止Safari的布局问题 */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Safari图片样式 */
+.safari-image-style {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  -webkit-object-fit: cover !important;
+  object-position: center !important;
+  -webkit-object-position: center !important;
+  /* 确保Safari正确渲染图片 */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  /* 防止Safari图片闪烁 */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Safari图片显示优化 */
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Safari卡片整体hover缩放效果 */
+.safari-card-scale {
+  transition: transform 0.3s ease-out, background 0.3s ease-out !important;
+  -webkit-transition: -webkit-transform 0.3s ease-out, background 0.3s ease-out !important;
+}
+
+.safari-card-scale:hover {
+  transform: scale(1.05) !important;
+  -webkit-transform: scale(1.05) !important;
+  /* 保持背景渐变变化 */
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(7, 40, 103, 0.9) 50%,
+      rgba(7, 40, 103, 1) 100%) !important;
+}
+
+/* 移动端Safari优化 */
+@media screen and (max-width: 768px) {
+  .safari-image-container {
+    height: 200px;
+    /* 移动端稍微减小高度 */
+  }
+}
+
+/* 桌面端Safari优化 */
+@media screen and (min-width: 769px) {
+  .safari-image-container {
+    height: 260px;
+    /* 桌面端标准高度 */
+  }
 }
 
 /* 桌面端卡片悬停效果 */
