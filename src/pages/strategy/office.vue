@@ -50,14 +50,14 @@
           <div class="w-1/2 flex justify-center">
             <img :src="images" alt="" srcset="" class="w-full  bg-[#EBEFF4] ">
           </div>
-          <div class="w-1/2 pr-40">
+          <div class="w-1/2 pr-10">
             <p class="text-2xl xl:text-3xl 2xl:text-4xl font-bold leading-12">
               {{ t('pages.office.valueProposition.title') }} </p>
             <p class="text-2xl xl:text-3xl 2xl:text-4xl font-bold  mb-10">
               {{ t('pages.office.valueProposition.title2') }}
             </p>
 
-            <p class="text-xl pr-20 my-10 leading-relaxed text-algin-justify">
+            <p class="text-xl  my-10 leading-relaxed text-algin-justify">
               {{ t('pages.office.valueProposition.content') }}
             </p>
           </div>
