@@ -1,6 +1,6 @@
-/* 锁定根元素 font-size，禁止浏览器缩放影响 */
+/* 恢复固定根字体大小，配合手动缩放控制 */
 html {
-    font-size: 16px !important; /* Tailwind 4 默认基准字号，固定不变 */
+    font-size: 16px !important; /* 基准字体大小，配合缩放比例 */
     -webkit-text-size-adjust: 100% !important; /* 禁止 Safari 自动调整文本大小 */
     text-size-adjust: 100% !important; /* 标准属性，兼容其他浏览器 */
 }
@@ -72,9 +72,6 @@ html {
         width: 100%;
         height: auto;
         min-height: 100vh;
-        /* Safari视口高度优化 */
-        min-height: 100dvh; /* 动态视口高度 */
-        min-height: 100vh; /* 备选方案 */
         margin: 0;
         padding: 0;
         overflow-x: hidden;
@@ -84,9 +81,6 @@ html {
         width: 100%;
         height: auto;
         min-height: 100vh;
-        /* Safari视口高度优化 */
-        min-height: 100dvh; /* 动态视口高度，更适合移动设备 */
-        min-height: 100vh; /* 备选方案 */
         margin: 0;
         padding: 0;
         overflow-x: hidden;
@@ -439,6 +433,34 @@ html {
             border-right: none;
         }
 
+        /* 统一表格布局 - 解决不同浏览器宽度不一致问题 */
+        .table-fixed {
+            table-layout: fixed !important;
+        }
+
+        .table-fixed th,
+        .table-fixed td {
+            overflow: hidden;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        /* Safari特殊处理 */
+        @supports (-webkit-appearance: none) {
+            .table-fixed {
+                -webkit-table-layout: fixed;
+                table-layout: fixed;
+            }
+
+            .table-fixed th,
+            .table-fixed td {
+                -webkit-hyphens: auto;
+                hyphens: auto;
+                -webkit-word-break: break-word;
+                word-break: break-word;
+            }
+        }
+
         /* 视频样式 */
         video {
             max-width: 100%;
@@ -604,9 +626,6 @@ html {
     /* 页面容器基础样式 */
     .page-container {
         min-height: 100vh;
-        /* Safari视口高度优化 */
-        min-height: 100dvh; /* 动态视口高度 */
-        min-height: 100vh; /* 备选方案 */
         position: relative;
         overflow-x: hidden;
     }
@@ -614,13 +633,6 @@ html {
     /* 内容区域动画进入效果 */
     .content-enter {
         animation: contentSlideIn 0.6s ease-out forwards;
-    }
-
-    /* Safari下禁用内容动画避免冲突 */
-    .proportional-scaling-active .content-enter {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
     }
 
     @keyframes contentSlideIn {
@@ -634,24 +646,13 @@ html {
         }
     }
 
-    /* 悬停效果增强 - Safari兼容性优化 */
+    /* 悬停效果增强 */
     .hover-lift {
         transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     }
 
-    /* Safari下禁用hover-lift的transform过渡 */
-    .proportional-scaling-active .hover-lift {
-        transition: box-shadow 0.3s ease-out !important;
-    }
-
     .hover-lift:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Safari下的hover效果不使用transform */
-    .proportional-scaling-active .hover-lift:hover {
-        transform: none !important;
         box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
     }
 }
@@ -664,9 +665,6 @@ html {
         overflow-y: scroll;
         height: auto;
         min-height: 100vh;
-        /* Safari视口高度优化 */
-        min-height: 100dvh; /* 动态视口高度 */
-        min-height: 100vh; /* 备选方案 */
     }
 
     body {
@@ -676,86 +674,55 @@ html {
         padding: 0;
         height: auto;
         min-height: 100vh;
-        /* Safari视口高度优化 */
-        min-height: 100dvh; /* 动态视口高度 */
-        min-height: 100vh; /* 备选方案 */
     }
 
     /* 比例缩放状态下的统一优化 */
     .proportional-scaling-active {
         width: 100%;
-        height: auto;
+        /* 移除height: auto，让JavaScript控制 */
         overflow-y: visible;
     }
 
     .proportional-scaling-active #app {
         position: relative;
         transform-origin: top left;
-        /* Safari兼容性优化 */
         -webkit-transform-origin: top left;
-        /* 防止Safari下的闪烁和重复渲染 */
-        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        /* Safari zoom优化 */
-        -webkit-text-size-adjust: none;
+        -webkit-backface-visibility: hidden;
         text-size-adjust: none;
-        /* 强制禁用Safari的transform过渡 */
-        -webkit-transition: none !important;
+        -webkit-text-size-adjust: none;
         transition: none !important;
+        -webkit-transition: none !important;
+
+        /* Safari 3D渲染优化 */
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+
+        /* 优化Safari渲染性能 */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Safari背景效果兼容性优化 */
-    @supports (-webkit-backdrop-filter: blur(4px)) or
-        (backdrop-filter: blur(4px)) {
-        /* Safari特有的backdrop-filter支持 */
-        .safari-backdrop-blur {
-            -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
-        }
-    }
-
-    /* Safari hover效果优化 */
-    @media screen and (max-width: 768px) {
-        /* 移动端Safari禁用hover transform效果 */
-        .safari-hover-safe:hover {
-            transform: none !important;
-            -webkit-transform: none !important;
-        }
-
-        /* 移动端使用active替代hover */
-        .safari-hover-safe:active {
-            transform: scale(0.98);
-            -webkit-transform: scale(0.98);
-            transition: transform 0.2s ease-out;
-            -webkit-transition: -webkit-transform 0.2s ease-out;
-        }
-    }
-
-    /* Safari渐变背景优化 */
-    .safari-gradient-bg {
-        background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.2) 0%,
-            rgba(7, 40, 103, 0.8) 50%,
-            rgba(7, 40, 103, 1) 100%
-        );
-    }
-
-    /* Safari兼容性检测和应用 */
+    /* Safari transform缩放时的特殊处理 */
     @supports (-webkit-appearance: none) {
-        /* Safari特有的样式优化 */
-        .safari-optimized {
-            /* 强制使用标准渲染模式 */
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+        .proportional-scaling-active html,
+        .proportional-scaling-active body {
+            /* 强制Safari使用正确的高度，由JavaScript设置 */
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+            /* 防止任何其他规则覆盖高度 */
+            height: var(--safari-body-height, auto) !important;
+        }
 
-            /* 优化文字渲染 */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-
-            /* 防止Safari的渲染闪烁 */
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+        .proportional-scaling-active #app {
+            /* 确保在transform缩放时app容器占满整个视口 */
+            position: relative;
+            box-sizing: border-box;
         }
     }
 }

@@ -19,7 +19,13 @@
     <Container type="extra-wide">
       <!-- 桌面端表格 -->
       <div class="py-20 px-10">
-        <table class="w-full border-collapse border border-[#072867]">
+        <table class="w-full border-collapse border border-[#072867] table-fixed">
+          <colgroup>
+            <col class="w-1/4">
+            <col class="w-1/6">
+            <col class="w-1/3">
+            <col class="w-1/4">
+          </colgroup>
           <thead>
             <tr>
               <th v-for="(header, idx) in tableHeaders" :key="idx"
@@ -30,18 +36,20 @@
           </thead>
           <tbody>
             <tr v-for="(row, rowIdx) in tableRows" :key="rowIdx" class="">
-              <td class="text-2xl font-bold p-8 border-r border-b border-[#072867] text-center word-break-keep-all">{{ row.corporation
-                }}<br />{{
+              <td class="text-2xl font-bold py-8 px-10 border-r border-b border-[#072867] text-center ">{{
+                row.corporation
+              }}<br />{{
                   row.corporation2 }}</td>
-              <td class="text-xl w-60 p-6 border-r border-b border-[#072867]">{{ row.relationship }}</td>
+              <td class="text-xl p-6 border-r border-b border-[#072867]">{{ row.relationship }}</td>
               <td class="text-xl p-6 border-r border-b border-[#072867] text-algin-justify">{{ row.license }}</td>
-              <td class="text-xl p-8 border-r border-b border-[#072867] ">{{ row.service }}</td>
+              <td class="text-xl p-8 border-r border-b border-[#072867]">{{ row.service }}</td>
             </tr>
             <!-- text-algin-justify line-break-anywhere -->
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="4" class="text-xl text-[#727e9b] italic p-16 border-r border-b border-[#072867] text-algin-justify">
+              <td colspan="4"
+                class="text-xl text-[#727e9b] italic p-16 border-r border-b border-[#072867] text-algin-justify">
                 {{ t('pages.licenses.disclaimer') }}
               </td>
             </tr>

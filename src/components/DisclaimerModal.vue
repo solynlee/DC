@@ -1,5 +1,5 @@
 <template>
-  <el-dialog v-model="visible" :lockScroll='false' width="80%" :close-on-click-modal="false"
+  <el-dialog v-model="visible" :lockScroll='false' width="80%" append-to-body :close-on-click-modal="false"
     :close-on-press-escape="false" :show-close="false" class="disclaimer-modal">
     <div class="disclaimer-content">
 

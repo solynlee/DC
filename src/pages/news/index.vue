@@ -26,7 +26,7 @@
           <!-- 公司动态区域 -->
           <div class="flex justify-center w-full mt-44 pb-16">
             <div class="w-[95%] px-8">
-              <div class="bg-gradient-to-b from-[#01398E] to-[#6997DD] backdrop-blur-sm rounded-lg p-10">
+              <div class="news-gradient-container backdrop-blur-sm rounded-lg p-10">
 
                 <div class="absolute inset-0 opacity-10">
                   <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/20 to-transparent"></div>
@@ -317,6 +317,27 @@ section {
 /* 桌面端卡片悬停效果 */
 .group:hover .aspect-\[4\/3\] img {
   filter: brightness(1.1);
+}
+
+/* 新闻容器渐变背景适配 */
+.news-gradient-container {
+  /* 默认使用Tailwind渐变 */
+  background: linear-gradient(to bottom, #01398E, #6997DD);
+}
+
+/* iOS Safari特殊适配 */
+@supports (-webkit-appearance: none) {
+  .news-gradient-container {
+    /* iOS Safari渐变优化 */
+    background: -webkit-linear-gradient(top, #01398E 0%, #6997DD 100%);
+    background: linear-gradient(to bottom, #01398E 0%, #6997DD 100%);
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 }
 
 /* 新闻卡片渐变背景优化 */

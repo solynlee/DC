@@ -53,8 +53,8 @@
     .max-width-10rem {
         max-width: 10rem;
     }
-    .white-space-nowrap{
-        white-space:nowrap;
+    .white-space-nowrap {
+        white-space: nowrap;
     }
     /* line-break: anywhere; */
     /* .leading-relaxed{
@@ -78,8 +78,8 @@
     .max-width-10rem {
         max-width: 10rem;
     }
-    .white-space-nowrap{
-        white-space:nowrap;
+    .white-space-nowrap {
+        white-space: nowrap;
     }
     /* line-break: anywhere; */
     /* text-align: justify; */
@@ -97,9 +97,6 @@ body {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    /* Safari视口高度优化 */
-    min-height: 100dvh; /* 动态视口高度，更适合移动设备 */
-    min-height: 100vh; /* 备选方案 */
     background: #f8f9fa; /* 浅灰背景 */
     /* font-family: "AlibabaPuHuiTi-3"; */
     line-height: 1.6;
