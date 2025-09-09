@@ -120,7 +120,7 @@
           <div class="flex flex-row justify-between items-center gap-18">
             <div class="w-full flex-1 text-left ">
               <div class="flex items-center justify-start gap-7">
-                  <!-- h-11 图像移除高度 -->
+                <!-- h-11 图像移除高度 -->
                 <img src="@/assets/images/home/icon4.png" alt="" srcset="" class="w-10">
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.insuranceBrokers.title') }}</span>
@@ -148,7 +148,7 @@
             <img src="@/assets/images/home/business.png" alt="" srcset="" class="w-226 h-124 max-w-none">
             <div class="w-full flex-1 text-left">
               <div class="flex items-center justify-start gap-7">
-                  <!-- h-11 图像移除高度 -->
+                <!-- h-11 图像移除高度 -->
                 <img src="@/assets/images/home/icon5.png" alt="" srcset="" class="w-10">
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.business.title') }}</span>
@@ -174,7 +174,7 @@
           <div class="flex flex-row justify-between items-center gap-18">
             <div class="w-full flex-1 text-left ">
               <div class="flex items-center justify-start gap-7">
-                  <!-- h-11 图像移除高度 -->
+                <!-- h-11 图像移除高度 -->
                 <img src="@/assets/images/home/icon3.png" alt="" srcset="" class="w-10">
                 <span class="text-[#072867] text-3xl  font-bold">{{
                   t('pages.home.nonFinancialServices.title') }}</span>
@@ -207,8 +207,7 @@
             <div class="grid grid-cols-3 gap-15  mx-auto">
               <div class="text-center cursor-pointer h-full pt-20" @click="router.push({ name: 'proposition' })">
                 <div class="flex-1 mx-auto mb-8">
-                  <img src="@/assets/images/home/coins.png" alt="" srcset=""
-                    class="w-full h-auto aspect-4-3 rounded-lg">
+                  <img src="@/assets/images/home/coins.png" alt="" srcset="" class="w-full h-auto aspect-4-3">
                 </div>
                 <p class="text-2xl font-bold mb-5">{{
                   t('pages.home.whyChooseUs.coreValue.title') }}</p>
@@ -217,8 +216,7 @@
               </div>
               <div class="text-center cursor-pointer h-full" @click="router.push({ name: 'team' })">
                 <div class="flex-1 mx-auto mb-8 relative">
-                  <img src="@/assets/images/home/vertical.png" alt="" srcset=""
-                    class="w-full h-auto aspect-4-3 rounded-lg">
+                  <img src="@/assets/images/home/vertical.png" alt="" srcset="" class="w-full h-auto aspect-4-3 ">
                   <div class="absolute bottom-0 left-0 w-full h-ful text-white px-8 pb-10">
                     <div class="h-1 w-20 bg-[#A37B24] mx-auto mb-4"></div>
                     <p class="text-2xl font-bold mb-5">{{
@@ -231,14 +229,13 @@
               </div>
               <div class="text-center cursor-pointer h-full pt-20" @click="router.push({ name: 'value' })">
                 <div class="flex-1 mx-auto mb-8">
-                  <img src="@/assets/images/home/wealth.png" alt="" srcset=""
-                    class="w-full h-auto aspect-4-3 rounded-lg">
+                  <img src="@/assets/images/home/wealth.png" alt="" srcset="" class="w-full h-auto aspect-4-3 ">
                 </div>
                 <p class="text-2xl font-bold mb-5">{{
                   t('pages.home.whyChooseUs.qualifications.title') }}</p>
                 <p class="text-lg leading-relaxed">{{
                   t('pages.home.whyChooseUs.qualifications.content') }}</p>
-                  <p class="text-lg leading-relaxed">{{
+                <p class="text-lg leading-relaxed">{{
                   t('pages.home.whyChooseUs.qualifications.content2') }}</p>
               </div>
 
