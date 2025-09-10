@@ -34,6 +34,7 @@ export default {
   },
   footer: {
     btn: 'Disclaimer',
+    contactUs: '',
     EAM: {
       title: `DC Wealth Management (HK) Limited is a DC Wealth Group company formed and registered in Hong Kong and a licensed corporation under the Securities and Futures Ordinance licensed to conduct Type 1 (Dealing in securities), Type 4 (Advising on securities) and Type 9 (Asset management) regulated activities (CE No.: BFT276).`,
       title2: ''

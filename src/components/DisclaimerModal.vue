@@ -210,7 +210,7 @@ defineExpose({
 }
 
 .confirmation-section {
-  padding: 24px 32px;
+  padding: 12px 32px 0 32px;
   background: #f8fafc;
   border-top: 1px solid #e2e8f0;
   display: flex;

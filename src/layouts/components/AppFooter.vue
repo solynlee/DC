@@ -14,13 +14,13 @@
           </span>
         </div>
         <div class="flex-1  px-20  text-white opacity-60 ">
-          <p class="mb-4 text-algin-justify"  v-if="title">{{ t(title) }}</p>
+          <p class="mb-4 text-algin-justify" v-if="title">{{ t(title) }}</p>
           <p v-if="title2">{{ t(title2) }}</p>
         </div>
         <div class="flex items-center justify-end gap-4">
           <div class="text-right">
             <p class="text-[#A37B24] text-2xl">Contact Us</p>
-            <p class="text-white">关注我们</p>
+            <p class="text-white">{{ t('footer.contactUs') }}</p>
           </div>
           <img src="@/assets/images/footer/code.png" alt="" srcset="" class="h-30 w-30">
         </div>
@@ -41,8 +41,9 @@
           </thead>
           <tbody>
             <tr v-for="(row, rowIdx) in tableRows" :key="rowIdx" class="text-[#6293e4]">
-              <td class="text-sm font-bold p-8 border-r border-b border-[#2d5eab] word-break-keep-all text-center w-60">{{ row.corporation }}<br />{{
-                row.corporation2 }}</td>
+              <td class="text-sm font-bold p-8 border-r border-b border-[#2d5eab] word-break-keep-all text-center w-60">
+                {{ row.corporation }}<br />{{
+                  row.corporation2 }}</td>
               <td class="text-xs w-60  p-8 border-r border-b border-[#2d5eab]">{{ row.relationship }}</td>
               <td class="text-xs w-130 p-8 border-r border-b border-[#2d5eab] text-algin-justify">{{ row.license }}</td>
               <td class="text-xs p-8 border-r border-b border-[#2d5eab] w-90">{{ row.service }}</td>
