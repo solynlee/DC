@@ -6,6 +6,7 @@ import tailwind from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), tailwind()],
+  assetsInclude: ['**/*.m4v'],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),

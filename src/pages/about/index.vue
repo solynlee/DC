@@ -5,7 +5,10 @@
 
       <div class="absolute w-full px-30 -bottom-1/10">
         <Container type="extra-wide">
-          <img src="@/assets/images/about/video.png" alt="" srcset="" class="w-full">
+          <div class="w-[1370px] h-[700px] mx-auto">
+            <video ref="videoRef" class="video-js" style="width: 100%; height: 100%"></video>
+          </div>
+          <!-- <img src="@/assets/images/about/video.png" alt="" srcset="" class="w-full"> -->
         </Container>
       </div>
     </div>
@@ -131,6 +134,8 @@
 
 
 <script setup lang="ts">
+import Videojs from 'video.js';
+import 'video.js/dist/video-js.min.css';
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import Container from '@/components/Container.vue'
@@ -145,8 +150,12 @@ import image6 from '@/assets/images/about/image6.png'
 import image7 from '@/assets/images/about/image7.png'
 import image8 from '@/assets/images/about/image8.png'
 import image9 from '@/assets/images/about/image9.png'
-import { computed } from 'vue'
+import { computed, onMounted, ref, shallowRef } from 'vue'
+import m4v from '@/assets/video/dc.m4v'
+import imgUrl from '@/assets/images/about/video.png'
 
+const videoRef = ref(null);
+const videoInstance = shallowRef(); //提高性能
 const images = computed(() => {
   if (locale.value === 'zh-CN') {
     return [image1, image2, image3]
@@ -169,7 +178,47 @@ const handleValue = () => {
 const handleLicenses = () => {
   router.push({ name: 'licenses' })
 }
+
+const potions = {
+  sources: [
+    // 两种播放格式
+    {
+      type: 'video/mp4',
+      src: m4v,
+    },
+    // {
+    //   src: 'https://gcalic.v.myalicdn.com/gc/jsh02_1/index.m3u8?contentid=2820180516001',
+    //   type: 'application/x-mpegURL',
+    // },
+  ],
+  autoplay: false, //是否自动播放
+  loop: false, //是否循环播放
+  controls: true, //控制器
+  preload: true, //是否预加载
+  language: 'zh-CN', //显示的语言 中文
+  playbackRates: [0.5, 1, 1.5, 2], //播放速度
+  poster: imgUrl, //封面图
+};
+/**
+ * 初始化video
+ */
+const initVideo = () => {
+  if (!videoRef.value) return;
+  // Videojs第一个参数可以使video标签的id或者目标标签元素，第二个参数为配置项。
+  videoInstance.value = Videojs(videoRef.value, potions);
+};
+onMounted(() => {
+  initVideo();
+
+})
+
 </script>
 
 
-<style scoped></style>
+<style scoped>
+:deep(.vjs-big-play-button) {
+
+  display: none;
+
+}
+</style>
